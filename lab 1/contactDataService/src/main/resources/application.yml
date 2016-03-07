@@ -1,0 +1,17 @@
+spring:
+  profiles.active: local
+  jpa:
+    hibernate:
+      ddl-auto: create
+logging:
+  level:
+    io.pivotal.demo: DEBUG
+    org.hibernate.SQL: DEBUG
+
+---
+spring:
+  profiles: local
+  
+---
+spring:
+  profiles: cloud

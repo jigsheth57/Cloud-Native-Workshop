@@ -1,0 +1,18 @@
+logging:
+  level:
+    io.pivotal.demo: DEBUG
+server:
+  port: 8090
+
+contact:
+  dataservice:
+    endpoint: http://${vcap.services.contact-service.credentials.uri:localhost:8080}/contacts/
+    unavailable: '{"status":503,"data":"Service currently unavailable."}'
+  
+---
+spring:
+  profiles: local
+  
+---
+spring:
+  profiles: cloud

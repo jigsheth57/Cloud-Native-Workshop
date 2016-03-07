@@ -1,0 +1,142 @@
+11:11:54.516 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+11:11:59.197 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+11:11:59.453 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: [{ rel : contacts, href : http://localhost:8080/contacts{?page,size,sort} }, { rel : profile, href : http://localhost:8080/profile }]
+11:12:15.504 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+11:12:15.803 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: [{ rel : self, href : http://localhost:8080/contacts }, { rel : profile, href : http://localhost:8080/profile/contacts }, { rel : search, href : http://localhost:8080/contacts/search }, { rel : contact, href : http://localhost:8080/contacts/1 }]
+11:12:25.455 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/1 using null
+11:14:04.210 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+14:45:49.365 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/ using null
+14:45:54.832 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/1 using null
+14:45:58.809 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+14:46:16.551 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending DELETE to http://localhost:8080/contacts/2 using null
+14:46:27.788 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+14:47:11.332 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:8080/contacts/3 using {firstName=Jig, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+15:17:53.888 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/1 using null
+15:18:04.048 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+15:20:29.153 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+15:22:01.840 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/1 using null
+15:22:05.109 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+15:22:08.436 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/2 using null
+18:36:42.931 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/1 using null
+18:36:50.029 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+18:38:55.810 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/1 using null
+18:38:59.428 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+18:42:01.778 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/1 using null
+18:42:03.934 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+18:43:12.735 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+18:44:18.126 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:8080/contacts/2 using {firstName=Jig, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+18:46:03.285 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending DELETE to http://localhost:8080/contacts/2 using null
+18:46:08.544 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts using null
+18:59:35.449 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:8080/contacts/2 using {firstName=Jig, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+19:14:35.077 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+19:29:14.599 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+19:35:19.813 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+19:53:57.026 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+22:10:49.824 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/1 using null
+22:10:53.408 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+22:16:34.366 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+22:27:48.786 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+22:54:45.152 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+22:57:24.616 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+22:58:15.170 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:8080/contacts/2 using {firstName=Jig, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+22:58:39.321 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending DELETE to http://localhost:8080/contacts/2 using null
+23:00:44.894 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:05:37.639 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:07:54.376 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:09:50.651 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:10:39.396 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:11:33.840 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:12:50.077 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:15:35.462 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:19:23.500 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:20:43.914 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:23:02.355 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:29:42.868 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:36:12.181 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+23:36:13.089 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: [{ rel : self, href : http://contactdataservice.cfapps.pez.pivotal.io/contacts }, { rel : profile, href : http://contactdataservice.cfapps.pez.pivotal.io/profile/contacts }, { rel : search, href : http://contactdataservice.cfapps.pez.pivotal.io/contacts/search }, { rel : contact, href : http://contactdataservice.cfapps.pez.pivotal.io/contacts/1 }]
+23:36:26.172 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://contactdataservice.cfapps.pez.pivotal.io/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:45:41.198 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://contactdataservice.cfapps.pez.pivotal.io/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+23:50:25.510 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+23:50:25.806 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: [{ rel : self, href : http://localhost:8080/contacts }, { rel : profile, href : http://localhost:8080/profile/contacts }, { rel : search, href : http://localhost:8080/contacts/search }, { rel : contact, href : http://localhost:8080/contacts/1 }]
+23:50:30.255 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+00:00:34.217 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+00:13:38.291 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+00:15:58.527 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+00:22:10.347 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+00:22:11.600 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: [{ rel : self, href : http://contactdataservice.cfapps.pez.pivotal.io/contacts }, { rel : profile, href : http://contactdataservice.cfapps.pez.pivotal.io/profile/contacts }, { rel : search, href : http://contactdataservice.cfapps.pez.pivotal.io/contacts/search }, { rel : contact, href : http://contactdataservice.cfapps.pez.pivotal.io/contacts/1 }]
+00:22:16.623 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://contactdataservice.cfapps.pez.pivotal.io/contacts/ using {firstName=Jignesh, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+00:23:19.004 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://contactdataservice.cfapps.pez.pivotal.io/contacts/2 using {firstName=Jig, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=312-555-1212}
+00:23:34.630 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending DELETE to http://contactdataservice.cfapps.pez.pivotal.io/contacts/2 using null
+00:24:54.076 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+00:24:54.758 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: [{ rel : self, href : http://contactdataservice.cfapps.pez.pivotal.io/contacts }, { rel : profile, href : http://contactdataservice.cfapps.pez.pivotal.io/profile/contacts }, { rel : search, href : http://contactdataservice.cfapps.pez.pivotal.io/contacts/search }, { rel : contact, href : http://contactdataservice.cfapps.pez.pivotal.io/contacts/1 }]
+00:24:59.523 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://contactdataservice.cfapps.pez.pivotal.io/contacts/search using null
+00:25:28.344 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://contactdataservice.cfapps.pez.pivotal.io/contacts/search/findByFirstNameOrLastName?firstName=Jignesh using null
+00:25:43.297 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://contactdataservice.cfapps.pez.pivotal.io/contacts/search/findByFirstNameOrLastName?firstName=Jig using null
+00:26:18.863 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://contactdataservice.cfapps.pez.pivotal.io/contacts/search/findByFirstNameOrLastName?lastName=Sheth using null
+08:46:31.961 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+08:46:32.246 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: [{ rel : self, href : http://localhost:8080/contacts }, { rel : profile, href : http://localhost:8080/profile/contacts }, { rel : search, href : http://localhost:8080/contacts/search }, { rel : contact, href : http://localhost:8080/contacts/1 }]
+08:55:40.870 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/1 using null
+08:56:47.396 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+08:57:16.197 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:8080/contacts/1 using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:03:15.433 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending DELETE to http://localhost:8080/contacts/1 using null
+09:12:52.046 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+09:12:52.163 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: []
+09:13:20.396 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8090/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:13:58.664 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/1 using null
+09:14:30.052 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+09:14:30.072 [Spring Shell] WARN  o.s.web.client.RestTemplate - GET request for "http://localhost:8080/contacts/" resulted in 500 (Internal Server Error); invoking error handler
+09:14:32.868 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+09:14:32.883 [Spring Shell] WARN  o.s.web.client.RestTemplate - GET request for "http://localhost:8080/contacts" resulted in 500 (Internal Server Error); invoking error handler
+09:14:56.209 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:15:02.661 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts using null
+09:15:21.968 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8080/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:15:40.136 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+09:15:40.158 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: []
+09:15:45.107 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/2 using null
+09:15:52.045 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/3 using null
+09:16:08.827 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts using null
+09:16:22.450 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending DELETE to http://localhost:8090/contacts/3 using null
+09:16:41.489 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8090/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:17:36.542 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:8090/contacts/2 using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:38:44.407 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:8090/contacts/2 using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:40:01.812 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts using null
+09:40:18.173 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:8090/contacts/2 using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:40:43.666 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:8090/contacts/2 using {firstName=Jig, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:40:47.146 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/2 using null
+09:41:16.955 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8090/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:45:55.482 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8090/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:46:09.549 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts using null
+09:46:14.129 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:8090/contacts/2 using {firstName=Jig, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:50:04.502 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/2 using null
+09:50:11.948 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:8090/contacts/2 using {firstName=Jig, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:50:23.155 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8090/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+09:50:37.200 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts using null
+09:50:45.645 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending DELETE to http://localhost:8090/contacts/4 using null
+09:50:58.824 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts using null
+09:53:59.284 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+09:53:59.300 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: [{ rel : self, href : http://localhost:8080/contacts }, { rel : profile, href : http://localhost:8080/profile/contacts }, { rel : search, href : http://localhost:8080/contacts/search }, { rel : contact, href : http://localhost:8080/contacts/2 }]
+09:54:02.573 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/search using null
+10:00:21.384 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/search/findByFirstNameOrLastName?firstName=Jig&lastName=Jig using null
+10:02:51.986 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+10:02:52.099 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: []
+10:02:56.475 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts using null
+10:03:29.584 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/search/findByFirstNameOrLastName?name=Jig using null
+10:03:50.105 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/search/findByFirstNameOrLastName using null
+10:03:56.175 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/contacts/search using null
+10:04:34.445 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/search/findByFirstNameOrLastName?name=Jig using null
+10:05:22.627 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/search/findByFirstNameOrLastName/Jig using null
+10:07:49.944 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/search/findByFirstNameOrLastName/Jig using null
+10:16:43.887 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/search/findByFirstNameOrLastName/Jig using null
+10:17:01.975 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/search/findByFirstNameOrLastName/Jignesh using null
+10:17:13.819 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8090/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+10:17:17.960 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:8090/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+10:17:22.335 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8090/contacts/search/findByFirstNameOrLastName/Jignesh using null
+15:40:14.772 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+15:40:39.924 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+15:40:40.416 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: [{ rel : self, href : http://contactdataservice.local.pcfdev.io/contacts }, { rel : profile, href : http://contactdataservice.local.pcfdev.io/profile/contacts }, { rel : search, href : http://contactdataservice.local.pcfdev.io/contacts/search }, { rel : contact, href : http://contactdataservice.local.pcfdev.io/contacts/1 }]
+15:40:44.934 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://contactdataservice.local.pcfdev.io/contacts using null
+15:40:51.994 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://contactdataservice.local.pcfdev.io/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+15:41:01.668 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://contactdataservice.local.pcfdev.io/contacts/1 using null
+15:41:04.154 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://contactdataservice.local.pcfdev.io/contacts/2 using null
+15:54:39.258 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://contactdataservice.local.pcfdev.io/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
+15:58:43.999 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://contactdataservice.local.pcfdev.io/contacts/ using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=312-555-1212}
