@@ -326,8 +326,8 @@ http://contactdataservice-untippled-birthplace.cfapps.io/contacts:> get self
     "number" : 0
   }
 }
-
-Test using Advance REST Client (Chrome App)
+----
+== Test using Advance REST Client (Chrome App)
 . Retrieve existing Contact
 image::advance-restclient-get.png[]
 
@@ -339,7 +339,6 @@ image::advance-restclient-put.png[]
 
 . Delete existing Contact
 image::advance-restclient-delete.png[]
-----
 
 == Interact with App from CF CLI
 
