@@ -8,15 +8,15 @@ function jsonValue() {
 
 if [ -n "$1" ]
 then
-  mvn clean package -DskipTests
+  # mvn clean package -DskipTests
   cf t
   echo -n "Validate the space & org, you are currently logged in before continuing!"
   read
-  cf cs p-rabbitmq standard p-rabbitmq
+  cf cs cloudamqp lemur p-rabbitmq
   csJSONStr={\"tag\":\"contact-service\",\"uri\":\"$1\"}
   echo $csJSONStr
   cf cups contact-service -p ${csJSONStr}
-  cf p -f ./manifest-contactWebApp.yml
+  cf p 
 else
   echo "Usage: deploy <contactDataService URI>"
 fi

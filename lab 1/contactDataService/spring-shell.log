@@ -5,3 +5,6 @@ post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Archite
 get 1
 put 1 --data "{firstName: 'Jig', lastName: 'Sheth', title: 'Platform Architect', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
 get self
+get self
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+put 1 --data "{firstName: 'Jig', lastName: 'Sheth', title: 'Platform Architect', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
