@@ -26,8 +26,8 @@ Follow the prompts
 $ cd $WORKSHOP_HOME/lab\ 2/contactWebApp
 ----
 . Create Service Instances for contactWebApp
-. Note: We are creating a user provided service instance. This service instance will allow contactWebApp to locate and communicate with contactDataService
-. Note: replace the uri value below with your contactDataService uri.
+.. Note: We are creating a user provided service instance. This service instance will allow contactWebApp to locate and communicate with contactDataService
+.. Note: replace the uri value below with your contactDataService uri.
 +
 ----
 $ cf cups contact-service -p '{"tag":"contact-service", "uri":"contactdataservice-untippled-birthplace.cfapps.io"}'
@@ -150,10 +150,12 @@ Here the droplet is being uploaded to Pivotal Cloudfoundry's internal blobstore 
 ====
 ----
 point the browser to following url: http://contactwebapp-hazy-trisaccharide.cfapps.io
++
 image::lab2.png[]
 
 See the events being generated when interacting with contactDataService. contactDataService will publish any events that modifies the Domain Model to RabbitMQ.
-image::lab2-event2.png[]
++
+image::lab2-events.png[]
 ----
 
 == Interact with App from CF CLI
