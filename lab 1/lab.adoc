@@ -4,7 +4,7 @@
 
 . If you haven't already, download the latest release of the Cloud Foundry CLI from https://github.com/cloudfoundry/cli/releases for your operating system and install it.
 
-. Optionally, you should install Spring REST Shell (https://github.com/spring-projects/rest-shell#readme) to test out the application. You can also use any other REST client that supports full set of HTTP Methods (PUT, POST, DELETE & GET) such as WizTools.org RESTClient (http://code.fosshub.com/WizToolsorg-RESTClient/downloads)
+. Optionally, you should install Spring REST Shell (https://github.com/spring-projects/rest-shell#readme) to test out the application. You can also use any other REST client that supports full set of HTTP Methods (PUT, POST, DELETE & GET) such as Advance REST Client (https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo)
 
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
@@ -326,6 +326,19 @@ http://contactdataservice-untippled-birthplace.cfapps.io/contacts:> get self
     "number" : 0
   }
 }
+
+Test using Advance REST Client (Chrome App)
+. Retrieve existing Contact
+image::advance-restclient-get.png[]
+
+. Create new Contact
+image::advance-restclient-post.png[]
+
+. Update existing Contact
+image::advance-restclient-put.png[]
+
+. Delete existing Contact
+image::advance-restclient-delete.png[]
 ----
 
 == Interact with App from CF CLI
