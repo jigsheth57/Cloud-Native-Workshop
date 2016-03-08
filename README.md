@@ -31,8 +31,8 @@ The session includes presentations, demos and hands-on labs. It will cover gener
 
 #### Course Materials
 
-* Session 1: [Welcome to the Cloud Native Enterprise](presentations/Session_1_Cloud_Native_Enterprise.pptx)
-* Session 2: [Pivotal Cloud Foundry Architecture and Operations](presentations/Session_2_Architecture_And_Operations.pptx)
+* Session 1: [Welcome to the Cloud Native Enterprise](presentations/Session_1_Cloud_Native_Enterprise.pdf)
+* Session 2: [Pivotal Cloud Foundry Architecture and Operations](presentations/Session_2_Architecture_And_Operations.pdf)
 
 * Developer Workshop
   * Lab 1 - [From Zero to Pushing Your First Application \(Event-Driven Data Service using Spring Boot, JPA & AMQP\)](lab\ 1/lab.adoc)
