@@ -1,8 +1,10 @@
-= Lab 1 - From Zero to Pushing Your First Application
+= Lab 1 - From Zero to Pushing Your First Application (Event-Driven Data Service using Spring Boot, JPA & AMQP)
 
 == Target
 
 . If you haven't already, download the latest release of the Cloud Foundry CLI from https://github.com/cloudfoundry/cli/releases for your operating system and install it.
+
+. Optionally, you should install Spring REST Shell (https://github.com/spring-projects/rest-shell#readme) to test out the application. You can also use any other REST client that supports full set of HTTP Methods (PUT, POST, DELETE & GET) such as WizTools.org RESTClient (http://code.fosshub.com/WizToolsorg-RESTClient/downloads)
 
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
