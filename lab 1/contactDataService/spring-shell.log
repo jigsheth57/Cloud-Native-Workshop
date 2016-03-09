@@ -13,3 +13,6 @@ help
 header list
 var get
 post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+get self
+put 14 --data "{firstName: 'Jig', lastName: 'Sheth', title: 'Platform Architect', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
+put 14 --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
