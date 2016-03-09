@@ -10,6 +10,22 @@
 
 	<name>contactDataService</name>
 	<description>Demo project for Spring Boot</description>
+	<inceptionYear>2016</inceptionYear>
+
+	<!-- Organization -->
+	<organization>
+		<name>Pivotal</name>
+		<url>http://www.pivotal.io</url>
+	</organization>
+
+	<!-- Developers -->
+	<developers>
+		<developer>
+			<name>Jignesh Sheth</name>
+			<email>jigsheth@pivotal.io</email>
+			<organization>Pivotal</organization>
+		</developer>
+	</developers>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -51,7 +67,7 @@
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -60,6 +76,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 
 </project>
