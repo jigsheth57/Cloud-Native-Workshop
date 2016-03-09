@@ -16,3 +16,22 @@ post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Archite
 get self
 put 14 --data "{firstName: 'Jig', lastName: 'Sheth', title: 'Platform Architect', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
 put 14 --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+discover http://192.168.99.101:8080/contacts
+get self
+get 1
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+get self
+put 1 --data "{firstName: 'Jignesh', lastName: 'Sheth', title: 'PA', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
+get self
+get 1
+put 1 --data "{firstName: 'Jignesh', lastName: 'Sheth', title: 'PA', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
+get 1
+put 1 --data "{firstName: 'Jignesh', lastName: 'Sheth', title: 'PA', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
+put 1 --data "{firstName: 'Jignesh', lastName: 'Sheth', title: 'PA', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+get self
+delete 2
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+put 1 --data "{firstName: 'Jignesh', lastName: 'Sheth', title: 'PA', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
+delete 2

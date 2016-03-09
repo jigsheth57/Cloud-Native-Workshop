@@ -156,3 +156,23 @@
 08:06:48.601 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://contactdataservice-untippled-birthplace.cfapps.io/contacts using null
 08:10:30.790 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://contactdataservice-untippled-birthplace.cfapps.io/contacts/14 using {firstName=Jig, lastName=Sheth, title=Platform Architect, email=jsheth@pivotal.io, phone=847-970-0298}
 08:13:01.891 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://contactdataservice-untippled-birthplace.cfapps.io/contacts/14 using {firstName=Peter, lastName=Sullivan, title=Platform Architect, email=pesullivan@pivotal.io, phone=312-286-4891}
+15:44:55.426 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - No 'Accept' header specified, using application/x-spring-data-compact+json
+15:44:56.155 [Spring Shell] DEBUG o.s.d.r.s.commands.DiscoveryCommands - Returning links: [{ rel : self, href : http://192.168.99.101:8080/contacts }, { rel : profile, href : http://192.168.99.101:8080/profile/contacts }, { rel : search, href : http://192.168.99.101:8080/contacts/search }, { rel : contact, href : http://192.168.99.101:8080/contacts/1 }]
+15:44:58.898 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://192.168.99.101:8080/contacts using null
+15:45:02.103 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://192.168.99.101:8080/contacts/1 using null
+15:45:09.398 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://192.168.99.101:8080/contacts/ using {firstName=Peter, lastName=Sullivan, title=Platform Architect, email=pesullivan@pivotal.io, phone=312-286-4891}
+15:45:19.948 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://192.168.99.101:8080/contacts/ using {firstName=Peter, lastName=Sullivan, title=Platform Architect, email=pesullivan@pivotal.io, phone=312-286-4891}
+15:45:49.722 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://192.168.99.101:8080/contacts using null
+15:46:46.490 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://192.168.99.101:8080/contacts/1 using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=847-970-0298}
+16:00:23.480 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://192.168.99.101:8080/contacts using null
+16:00:27.480 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://192.168.99.101:8080/contacts/1 using null
+16:00:32.864 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://192.168.99.101:8080/contacts/1 using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=847-970-0298}
+16:18:20.180 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://192.168.99.101:8080/contacts/1 using null
+16:18:22.666 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://192.168.99.101:8080/contacts/1 using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=847-970-0298}
+16:28:25.218 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://192.168.99.101:8080/contacts/1 using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=847-970-0298}
+16:30:13.223 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://192.168.99.101:8080/contacts/ using {firstName=Peter, lastName=Sullivan, title=Platform Architect, email=pesullivan@pivotal.io, phone=312-286-4891}
+16:30:29.727 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://192.168.99.101:8080/contacts using null
+16:30:34.180 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending DELETE to http://192.168.99.101:8080/contacts/2 using null
+16:35:13.603 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://192.168.99.101:8080/contacts/ using {firstName=Peter, lastName=Sullivan, title=Platform Architect, email=pesullivan@pivotal.io, phone=312-286-4891}
+16:35:38.377 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://192.168.99.101:8080/contacts/1 using {firstName=Jignesh, lastName=Sheth, title=PA, email=jsheth@pivotal.io, phone=847-970-0298}
+16:35:49.416 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending DELETE to http://192.168.99.101:8080/contacts/2 using null

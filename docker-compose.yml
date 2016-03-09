@@ -1,0 +1,26 @@
+contactDataService:
+  image: jigsheth57/spring-pcf:contactDataService
+  environment:
+    - SPRING_RABBITMQ_HOST=rabbitmq
+  ports:
+   - "8080:8080"
+  links:
+   - rabbitmq
+contactWebApp:
+  image: jigsheth57/spring-pcf:contactWebApp
+  environment:
+    - SPRING_RABBITMQ_HOST=rabbitmq
+    - VCAP_SERVICES_CONTACT-SERVICE_CREDENTIALS_URI=contactDataService:8080
+  ports:
+   - "8090:8090"
+  links:
+   - rabbitmq
+   - contactDataService
+rabbitmq:
+  image: rabbitmq:3-management
+  ports:
+  - "15672:15672"
+  - "5672:5672"
+  - "4369:4369"
+  - "5671:5671"
+  - "25672:25672"

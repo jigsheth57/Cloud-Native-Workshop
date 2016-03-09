@@ -1,1 +1,3 @@
+io/pivotal/demo/domain/unit/ContactTests.class
 io/pivotal/demo/ContactDataServiceApplicationTests.class
+io/pivotal/demo/repository/integration/ContactRepositoryTests.class
