@@ -1,4 +1,8 @@
-= Lab 1 - From Zero to Pushing Your First Application (Event-Driven Data Service using Spring Boot, JPA & AMQP)
+= Lab 1 - From Zero to Pushing Your First Application
+
+== Background
+
+This application is a backend RESTFul event-driven data service using Spring Boot, JPA, REST & AMQP. Using Spring Data JPA (http://projects.spring.io/spring-data-jpa/), it implementation of data access layers by reducing the effort to the amount that's actually needed. As a developer you write your repository interfaces, including custom finder methods, and Spring will provide the implementation automatically. By providing dependency to Spring Data REST, it will make the JPA repository RESTFul. In addtion, we have also implemented EntityListener, which would emmit any changes to the Entity/Domian Model and publish the change event onto messaging bus (RabbitMQ) using AMQP.
 
 == Target
 
@@ -41,7 +45,7 @@ blazemeter       free-tier, basic1kmr*, pro5kmr*                                
 cedexisopenmix   opx_global*, openmix-gslb-with-fusion-feeds*                                         Openmix Global Cloud &amp; Data Center Load Balancer
 cedexisradar     free-community-edition                                                               Free Website&amp; Mobile App Performance Reports
 cleardb          spark, boost*, amp*, shock*                                                          Highly available MySQL for your Apps.
-<cloudamqp>        <lemur>, tiger*, bunny*, rabbit*, panda*                                               Managed HA RabbitMQ servers in the cloud   
+<cloudamqp>        <lemur>, tiger*, bunny*, rabbit*, panda*                                               Managed HA RabbitMQ servers in the cloud
 cloudforge       free, standard*, pro*                                                                Development Tools In The Cloud
 elephantsql      turtle, panda*, hippo*, elephant*                                                    PostgreSQL as a Service
 flashreport      trial, basic*, silver*, gold*, platinum*                                             Generate PDF from your data
@@ -381,6 +385,20 @@ image::advance-restclient-put.png[]
 .. Delete existing Contact
 +
 image::advance-restclient-delete.png[]
+
+. See the publish events in RabbitMQ Management Console
+
+.. Access RabbitMQ Management Console
++
+image::rabbitMQ-management-link.png[]
+
+.. Access the publish message queue
++
+image::rabbitMQ-queue-management.png[]
+
+.. Retrieve the publish message
++
+image::rabbitMQ-queue-message.png[]
 
 ====
 
