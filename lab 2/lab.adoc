@@ -1,4 +1,9 @@
-= Lab 2 - Responsive Web UI for Your Data Service Application (Mobile Friendly Web UI for Event-Driven Data Service using Spring Boot, AngularJS & AMQP)
+= Lab 2 - Responsive Web UI for Contact Data Service Application
+
+== Background
+
+This application is a front-end mobile-first Web Application for the Contact Data Service using Spring Boot, AngularJS & AMQP. This web application allows you to create, retrieve, update, & delete Contact using Contact Data Service. The web application also provides user interface to monitor the publish change event by Contact Data Service.  
+
 
 == Target
 
