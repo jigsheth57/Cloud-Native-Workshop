@@ -48,3 +48,17 @@ get 1
 put 1 --data "{firstName: 'Jignesh', lastName: 'Sheth', title: 'PA', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
 exit
 // rest-shell 1.0.1.BUILD-SNAPSHOT log closed at 2016-03-09 18:55:08
+// rest-shell 1.0.1.BUILD-SNAPSHOT log opened at 2016-03-10 10:43:35
+discover http://contactdataservice-unpanelled-bottomry.local.pcfdev.io/contacts
+get 1
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+discover http://localhost:8080/contacts
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+discover http://contactdataservice-unpanelled-bottomry.local.pcfdev.io/contacts
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+discover http://localhost:8080/contacts
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+discover http://contactdataservice-unpanelled-bottomry.local.pcfdev.io/contacts
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"

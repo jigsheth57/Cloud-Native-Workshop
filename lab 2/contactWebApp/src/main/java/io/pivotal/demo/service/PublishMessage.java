@@ -14,14 +14,14 @@ import org.springframework.stereotype.Service;
 public class PublishMessage {
 
 	final static String queueName = "contact-change-event";
-	private static final Logger logger = LoggerFactory.getLogger(PublishMessage.class);
+	private static final Logger log = LoggerFactory.getLogger(PublishMessage.class);
 
 	@Autowired
     private SimpMessagingTemplate template;
 
 	@RabbitHandler
 	public void process(@Payload String message) {
-		logger.debug("process: "+message);
+		log.debug("process: "+message);
 		this.template.convertAndSend("/topic/message", message);
 	}
 }

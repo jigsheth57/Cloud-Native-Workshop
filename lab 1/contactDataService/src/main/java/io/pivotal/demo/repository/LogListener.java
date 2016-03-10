@@ -9,6 +9,7 @@ import javax.persistence.PostUpdate;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -50,6 +51,10 @@ public class LogListener {
     }
 
     private void postMessage(String message) {
+		ConnectionFactory conn = rabbitTemplate.getConnectionFactory();
+		log.debug("RabbitMQ Host:"+conn.getHost());
+		log.debug("RabbitMQ Port:"+conn.getPort());
+		log.debug("RabbitMQ VirtualHost:"+conn.getVirtualHost());
     	rabbitTemplate.convertAndSend(queueName, message);
     }
     

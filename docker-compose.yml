@@ -10,6 +10,9 @@ contactWebApp:
   image: jigsheth57/spring-pcf:contactWebApp
   environment:
     - SPRING_RABBITMQ_HOST=rabbitmq
+    - SPRING_RABBITMQ_PORT=5672
+    - SPRING_RABBITMQ_USERNAME=guest
+    - SPRING_RABBITMQ_PASSWORD=guest
     - VCAP_SERVICES_CONTACT-SERVICE_CREDENTIALS_URI=contactDataService:8080
   ports:
    - "8090:8090"
