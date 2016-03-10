@@ -32,7 +32,7 @@
 							<td><a href="#/contacts/e/{{contact.id}}"><img
 									alt="update" src="../images/update.jpg"
 									style="height: 16px; width: 16px;" /></a>&nbsp;&nbsp; <a
-								href="#/contacts" ng-click="delete(contact.id)"><img
+								href="#/contacts" ng-click="delete(contact.id); getContacts();"><img
 									src="../images/delete.jpg" style="height: 16px; width: 16px;"
 									alt="Delete" /></a></td>
 							<td><a href="#/contacts/{{contact.id}}">{{contact.lastName}}, {{contact.firstName}}</a></td>

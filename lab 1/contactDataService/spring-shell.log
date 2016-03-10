@@ -35,3 +35,16 @@ delete 2
 post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
 put 1 --data "{firstName: 'Jignesh', lastName: 'Sheth', title: 'PA', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
 delete 2
+discover http://contactdataservice.local.pcfdev.io/contacts/
+get 1
+put 1 --data "{firstName: 'Jignesh', lastName: 'Sheth', title: 'PA', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
+get 1
+put 1 --data "{firstName: 'Jignesh', lastName: 'Sheth', title: 'PA', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
+get 1
+put 1 --data "{firstName: 'Jignesh', lastName: 'Sheth', title: 'PA', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
+put 1 --data "{firstName: 'Jignesh', lastName: 'Sheth', title: 'PA', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
+discover http://contactdataservice-nonorientable-epanaphora.local.pcfdev.io/contacts
+get 1
+put 1 --data "{firstName: 'Jignesh', lastName: 'Sheth', title: 'PA', email: 'jsheth@pivotal.io', phone: '847-970-0298'}"
+exit
+// rest-shell 1.0.1.BUILD-SNAPSHOT log closed at 2016-03-09 18:55:08

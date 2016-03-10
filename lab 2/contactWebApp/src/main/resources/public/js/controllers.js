@@ -26,7 +26,6 @@ contactApp.controller('ContactListController', function($scope, $http) {
 	$scope.delete = function(contactId) {
 		console.log("deleting id " + contactId);
 		$http.delete('/contacts/'+contactId).success(function(data) {
-			console.log('Retrieving latest contact list!');
 			$scope.getContacts();
 		}).error(function(data) {
 			console.log('Error: ' + data);
