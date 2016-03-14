@@ -62,3 +62,5 @@ discover http://localhost:8080/contacts
 post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
 discover http://contactdataservice-unpanelled-bottomry.local.pcfdev.io/contacts
 post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+exit
+// rest-shell 1.0.1.BUILD-SNAPSHOT log closed at 2016-03-10 13:59:14
