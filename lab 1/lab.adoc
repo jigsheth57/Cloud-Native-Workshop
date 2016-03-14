@@ -46,7 +46,7 @@ blazemeter       free-tier, basic1kmr*, pro5kmr*                                
 cedexisopenmix   opx_global*, openmix-gslb-with-fusion-feeds*                                         Openmix Global Cloud &amp; Data Center Load Balancer
 cedexisradar     free-community-edition                                                               Free Website&amp; Mobile App Performance Reports
 cleardb          spark, boost*, amp*, shock*                                                          Highly available MySQL for your Apps.
-<cloudamqp>        <lemur>, tiger*, bunny*, rabbit*, panda*                                               Managed HA RabbitMQ servers in the cloud
+cloudamqp        lemur, tiger*, bunny*, rabbit*, panda*                                               Managed HA RabbitMQ servers in the cloud
 cloudforge       free, standard*, pro*                                                                Development Tools In The Cloud
 elephantsql      turtle, panda*, hippo*, elephant*                                                    PostgreSQL as a Service
 flashreport      trial, basic*, silver*, gold*, platinum*                                             Generate PDF from your data
@@ -56,7 +56,7 @@ memcachedcloud   100mb*, 250mb*, 500mb*, 1gb*, 2-5gb*, 5gb*, 30mb               
 memcachier       dev, 100*, 250*, 500*, 1000*, 2000*, 5000*, 7500*, 10000*, 20000*, 50000*, 100000*   The easiest, most advanced memcache.
 mongolab         sandbox                                                                              Fully-managed MongoDB-as-a-Service
 newrelic         standard                                                                             Manage and monitor your apps
-<p-mysql>          <100mb>, 1gb, 20gb                                                                     MySQL databases on demand
+p-mysql          100mb, 1gb, 20gb                                                                     MySQL databases on demand
 pubnub           free                                                                                 Build Realtime Apps that Scale
 rediscloud       100mb*, 250mb*, 500mb*, 1gb*, 2-5gb*, 5gb*, 10gb*, 50gb*, 30mb                       Enterprise-Class Redis for Developers
 searchify        small*, plus*, pro*                                                                  Custom search you control
@@ -83,6 +83,7 @@ $ cf push
 You should see output similar to the following listing. Take a look at the listing callouts for a play-by-play of what's happening:
 +
 ====
+[source,bash]
 ----
 Using manifest file /Users/jsheth/Documents/workspace/Spring-PCF-Workshop/lab 1/contactDataService/manifest.yml // <1>
 
