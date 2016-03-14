@@ -2,13 +2,13 @@
 
 == Background
 
-This application is a backend RESTFul event-driven data service using Spring Boot, JPA, REST & AMQP. Using Spring Data JPA (http://projects.spring.io/spring-data-jpa/), it implementation of data access layers by reducing the effort to the amount that's actually needed. As a developer you write your repository interfaces, including custom finder methods, and Spring will provide the implementation automatically. By providing dependency to Spring Data REST, it will make the JPA repository RESTFul. In addtion, we have also implemented EntityListener, which would emmit any changes to the Entity/Domian Model and publish the change event onto messaging bus (RabbitMQ) using AMQP.
+This application is a backend RESTFul event-driven data service using Spring Boot, JPA, REST & AMQP. Using link:++http://projects.spring.io/spring-data-jpa/++[Spring Data JPA], it implementation of data access layers by reducing the effort to the amount that's actually needed. As a developer you write your repository interfaces, including custom finder methods, and Spring will provide the implementation automatically. By providing dependency to Spring Data REST, it will make the JPA repository RESTFul. In addtion, we have also implemented EntityListener, which would emmit any changes to the Entity/Domian Model and publish the change event onto messaging bus (RabbitMQ) using AMQP.
 
 == Target
 
-. If you haven't already, download the latest release of the Cloud Foundry CLI from https://github.com/cloudfoundry/cli/releases for your operating system and install it.
+. If you haven't already, download the latest release of the link:++https://github.com/cloudfoundry/cli/releases++[Cloud Foundry CLI] for your operating system and install it.
 
-. Optionally, you should install Spring REST Shell (https://github.com/spring-projects/rest-shell#readme) to test out the application. You can also use any other REST client that supports full set of HTTP Methods (PUT, POST, DELETE & GET) such as Advance REST Client (https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo)
+. Optionally, you should install link:++https://github.com/spring-projects/rest-shell#readme++[Spring REST Shell] to test out the application. You can also use any other REST client that supports full set of HTTP Methods (PUT, POST, DELETE & GET) such as link:++https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo++[Advance REST Client]
 
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
