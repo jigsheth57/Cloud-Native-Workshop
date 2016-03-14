@@ -32,8 +32,8 @@ Follow the prompts
 $ cd $WORKSHOP_HOME/lab\ 1/contactDataService
 ----
 . Create Service Instances for contactDataService (set appropriate service and service plan for your environment)
-[source,bash]
 +
+[source,bash]
 ----
 $ cf m
 Getting services from marketplace in org Central / space jigsheth as jsheth@pivotal.io...
@@ -369,7 +369,7 @@ http://contactdataservice-untippled-birthplace.cfapps.io/contacts:> get self
 }
 ----
 
-== Test the backed data service app using Advance REST Client (Chrome App)
+. Test the backed data service app using Advance REST Client (Chrome App)
 
 .. Retrieve existing Contact
 +
