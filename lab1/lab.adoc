@@ -5,6 +5,7 @@
 This application is a backend RESTFul event-driven data service using Spring Boot, JPA, REST & AMQP. Using link:++http://projects.spring.io/spring-data-jpa/++[Spring Data JPA], it implementation of data access layers by reducing the effort to the amount that's actually needed. As a developer you write your repository interfaces, including custom finder methods, and Spring will provide the implementation automatically. By providing dependency to Spring Data REST, it will make the JPA repository RESTFul. In addtion, we have also implemented EntityListener, which would emmit any changes to the Entity/Domian Model and publish the change event onto messaging bus (RabbitMQ) using AMQP.
 
 To learn more about the Spring Boot Web App using Spring Data JPA, take a look at the link:++https://springframework.guru/spring-boot-web-application-part-3-spring-data-jpa++[tutorial].
+
 == Target
 
 . If you haven't already, download the latest release of the link:++https://github.com/cloudfoundry/cli/releases++[Cloud Foundry CLI] for your operating system and install it.
