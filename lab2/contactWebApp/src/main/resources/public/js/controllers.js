@@ -15,6 +15,14 @@ contactApp.controller('ContactListController', function($scope, $http) {
 		$http.get('/contacts').success(function(data) {
 			console.log("response data: " + JSON.stringify(data));
 			$scope.contacts = data._embedded.contacts;
+			$http.get('/env/CF_INSTANCE_INDEX').success(function(data) {
+				$scope.systemenv = data;
+				console.log('System Env CF_INSTANCE_INDEX: '+data);
+			}).error(function(data) {
+				console.log('Error: ' + data);
+				$scope.message = data.message;
+				$scope.error = data.code;
+			});
 		}).error(function(data) {
 			console.log('Error: ' + data);
 			$scope.message = data.message;
