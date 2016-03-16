@@ -24,8 +24,8 @@
 	</developers>
 
 	<modules>
-		<module>lab 1/contactDataService</module>
-		<module>lab 2/contactWebApp</module>
+		<module>lab1/contactDataService</module>
+		<module>lab2/contactWebApp</module>
   </modules>
 
 	<build>
