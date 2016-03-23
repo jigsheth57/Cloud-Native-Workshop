@@ -10,13 +10,17 @@ function jsonValue() {
 cf t
 echo -n "Validate the space & org, you are currently logged in before continuing!"
 read
-cf cs p-mysql 100mb p-mysql
-cf cs cloudamqp lemur p-rabbitmq
+cf cs p-mysql 100mb-dev p-mysql
+cf cs p-rabbitmq standard p-rabbitmq
 cf p
 
 # Generate User Specified Service Instance for this app, so other apps can easyily locate such as contactWebApp
 appdomain=`cf curl /v2/domains | jsonValue name 1 | sed -e 's/^[[:space:]]*//'`
+echo "App Domain: $appdomain"
 A_GUID=`cf curl /v2/apps?q=name:contactDataService | jsonValue guid 1 | sed -e 's/^[[:space:]]*//'`
 app_host=`cf curl /v2/apps/${A_GUID}/routes  | jsonValue host 1 | sed -e 's/^[[:space:]]*//'`
+echo "App Host: $app_host"
+csJSONStr={\"tag\":\"contact-service\",\"uri\":\"http://$app_host.$appdomain\"}
+echo \"$csJSONStr\"
 
-cf cups contact-service -p \"{\"tag\":\"contact-service\",\"uri\":\"http://$app_host.$appdomain\"}\"
+cf cups contact-service -p \"$csJSONStr\"

@@ -10,4 +10,4 @@ function jsonValue() {
   cf t
   echo -n "Validate the space & org, you are currently logged in before continuing!"
   read
-  cf cs cloudamqp lemur p-rabbitmq
+  cf cs p-rabbitmq standard p-rabbitmq

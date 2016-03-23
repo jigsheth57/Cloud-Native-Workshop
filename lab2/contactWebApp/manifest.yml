@@ -7,6 +7,6 @@ env:
 applications:
 - name: contactWebApp
   path: target/contactWebApp-0.0.1-SNAPSHOT.jar
-  # random-route: true
-  hosts: [ contactwebapp ]
+  random-route: true
+  # hosts: [ contactwebapp ]
   services: [ p-rabbitmq, contact-service ]

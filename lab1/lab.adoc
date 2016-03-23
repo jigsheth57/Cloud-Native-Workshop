@@ -15,7 +15,7 @@ To learn more about the Spring Boot Web App using Spring Data JPA, take a look a
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
 ----
-$ cf api https://api.run.pivotal.io --skip-ssl-validation
+$ cf api https://api.pcf5.cloud.fe.pivotal.io --skip-ssl-validation
 ----
 
 . Login to Pivotal Cloudfoundry:
@@ -31,50 +31,31 @@ Follow the prompts
 . Change to the _contactDataService_ sample application directory:
 +
 ----
-$ cd $WORKSHOP_HOME/lab\ 1/contactDataService
+$ cd $WORKSHOP_HOME/lab1/contactDataService
 ----
 . Create Service Instances for contactDataService (set appropriate service and service plan for your environment)
 +
 [source,bash]
 ----
 $ cf m
-Getting services from marketplace in org Central / space jigsheth as jsheth@pivotal.io...
+Getting services from marketplace in org Workshop / space jsheth@pivotal.io as jsheth@pivotal.io...
 OK
 
-service          plans                                                                                description
-3scale           free_appdirect, basic_appdirect*, pro_appdirect*                                     API Management Platform
-app-autoscaler   bronze, gold                                                                         Scales bound applications in response to load (beta)
-blazemeter       free-tier, basic1kmr*, pro5kmr*                                                      Performance Testing Platform
-cedexisopenmix   opx_global*, openmix-gslb-with-fusion-feeds*                                         Openmix Global Cloud &amp; Data Center Load Balancer
-cedexisradar     free-community-edition                                                               Free Website&amp; Mobile App Performance Reports
-cleardb          spark, boost*, amp*, shock*                                                          Highly available MySQL for your Apps.
-cloudamqp        lemur, tiger*, bunny*, rabbit*, panda*                                               Managed HA RabbitMQ servers in the cloud
-cloudforge       free, standard*, pro*                                                                Development Tools In The Cloud
-elephantsql      turtle, panda*, hippo*, elephant*                                                    PostgreSQL as a Service
-flashreport      trial, basic*, silver*, gold*, platinum*                                             Generate PDF from your data
-ironworker       production*, starter*, developer*, lite                                              Job Scheduling and Processing
-loadimpact       lifree, li100*, li500*, li1000*                                                      Automated and on-demand performance testing
-memcachedcloud   100mb*, 250mb*, 500mb*, 1gb*, 2-5gb*, 5gb*, 30mb                                     Enterprise-Class Memcached for Developers
-memcachier       dev, 100*, 250*, 500*, 1000*, 2000*, 5000*, 7500*, 10000*, 20000*, 50000*, 100000*   The easiest, most advanced memcache.
-mongolab         sandbox                                                                              Fully-managed MongoDB-as-a-Service
-newrelic         standard                                                                             Manage and monitor your apps
-p-mysql          100mb, 1gb, 20gb                                                                     MySQL databases on demand
-pubnub           free                                                                                 Build Realtime Apps that Scale
-rediscloud       100mb*, 250mb*, 500mb*, 1gb*, 2-5gb*, 5gb*, 10gb*, 50gb*, 30mb                       Enterprise-Class Redis for Developers
-searchify        small*, plus*, pro*                                                                  Custom search you control
-searchly         small*, micro*, professional*, advanced*, starter, business*, enterprise*            Search Made Simple. Powered-by Elasticsearch
-sendgrid         free, bronze*, silver*                                                               Email Delivery. Simplified.
-ssl              basic*                                                                               Upload your SSL certificate for your app(s) on your custom domain
-stamplay         plus*, premium*, core, starter*                                                      API-first development platform
-statica          starter, spike*, micro*, medium*, large*, enterprise*, premium*                      Enterprise Static IP Addresses
-temporize        small*, medium*, large*                                                              Simple and flexible job scheduling for your application
-
-* These service plans have an associated cost. Creating a service instance will incur this cost.
+service                       plans                     description
+app-autoscaler                bronze, gold              Scales bound applications in response to load
+p-circuit-breaker-dashboard   standard                  Circuit Breaker Dashboard for Spring Cloud Applications
+p-config-server               standard                  Config Server for Spring Cloud Applications
+p-mongodb                     development               MongoDB service for application development and testing
+p-mysql                       100mb-dev                 MySQL service for application development and testing
+p-neo4j                       development               Neo4j service for application development and testing
+p-rabbitmq                    standard                  RabbitMQ is a robust and scalable high-performance multi-protocol messaging broker.
+p-redis                       shared-vm, dedicated-vm   Redis service to provide a key-value store
+p-service-registry            standard                  Service Registry for Spring Cloud Applications
 
 TIP:  Use 'cf marketplace -s SERVICE' to view descriptions of individual plans of a given service.
 
-$ cf cs p-mysql 100mb p-mysql
-$ cf cs cloudamqp lemur p-rabbitmq
+$ cf cs p-mysql 100mb-dev p-mysql
+$ cf cs p-rabbitmq standard p-rabbitmq
 ----
 . Push the application!
 +
@@ -212,7 +193,7 @@ $ rest-shell
 
 Welcome to the REST shell. For assistance hit TAB or type "help".
 # Change the url to point to your instance of the contact data service.
-http://localhost:8080:> **discover http://contactdataservice-untippled-birthplace.cfapps.io/contacts**
+http://localhost:8080:> discover http://contactdataservice-untippled-birthplace.cfapps.io/contacts
 rel        href
 ====================================================================================
 self       http://contactdataservice-untippled-birthplace.cfapps.io/contacts
@@ -431,6 +412,15 @@ $ cf scale <<app_name>> -i 2
 ----
 $ cd $WORKSHOP_HOME
 $ ./kill_app_instance <<app_name>> 1
+
+Note: for windows user, you can execute following commands:
+$ cf curl /v2/apps?q=name:contactDataService
+Note copy the guid value from result: resources->metadata->guid
+$ cf curl /v2/apps/${GUID}/instances/${INSTANCE#} -X 'DELETE'
+
+Now you can monitor the app for auto healing
+$ cf app contactDataService
+
 ----
 . Stop the deployed application using the CLI
 +

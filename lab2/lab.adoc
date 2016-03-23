@@ -2,7 +2,7 @@
 
 == Background
 
-This application is a front-end mobile-first Web Application for the Contact Data Service using Spring Boot, AngularJS & AMQP. This web application allows you to create, retrieve, update, & delete Contact using Contact Data Service. The web application also provides user interface to monitor the publish change event by Contact Data Service.  
+This application is a front-end mobile-first Web Application for the Contact Data Service using Spring Boot, AngularJS & AMQP. This web application allows you to create, retrieve, update, & delete Contact using Contact Data Service. The web application also provides user interface to monitor the publish change event by Contact Data Service.
 
 
 == Target
@@ -12,7 +12,7 @@ This application is a front-end mobile-first Web Application for the Contact Dat
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
 ----
-$ cf api https://api.run.pivotal.io --skip-ssl-validation
+$ cf api https://api.pcf5.cloud.fe.pivotal.io --skip-ssl-validation
 ----
 
 . Login to Pivotal Cloudfoundry:
@@ -28,14 +28,22 @@ Follow the prompts
 . Change to the _contactWebApp_ sample application directory:
 +
 ----
-$ cd $WORKSHOP_HOME/lab\ 2/contactWebApp
+$ cd $WORKSHOP_HOME/lab2/contactWebApp
 ----
 . Create Service Instances for contactWebApp
 .. Note: We are creating a user provided service instance. This service instance will allow contactWebApp to locate and communicate with contactDataService
-.. Note: replace the uri value below with your contactDataService uri.
+.. Note: replace the uri value below with your contactDataService uri. You can obtain the contactDataService uri by executing command: **cf apps**
 +
 ----
-$ cf cups contact-service -p '{"tag":"contact-service", "uri":"contactdataservice-untippled-birthplace.cfapps.io"}'
+$ cf cups contact-service -p "tag,uri"
+
+tag> contact-service
+
+uri> contactdataservice-didactic-sleight.pcf5.cloud.fe.pivotal.io
+
+Creating user provided service contact-service in org Workshop / space jsheth@pivotal.io as jsheth@pivotal.io...
+OK
+
 ----
 . Push the application!
 +
@@ -154,7 +162,7 @@ Here the droplet is being uploaded to Pivotal Cloudfoundry's internal blobstore 
 +
 ====
 
-. point the browser to following url: http://contactwebapp-hazy-trisaccharide.cfapps.io
+. point the browser to following url: http://contactwebapp.pcf5.cloud.fe.pivotal.io
 +
 image::lab2.png[]
 
@@ -189,6 +197,16 @@ $ cf scale <<app_name>> -i 2
 ----
 $ cd $WORKSHOP_HOME
 $ ./kill_app_instance <<app_name>> 1
+
+Note: for windows user, you can execute following commands:
+$ cf curl /v2/apps?q=name:contactDataService
+Note copy the guid value from result: resources->metadata->guid
+$ cf curl /v2/apps/${GUID}/instances/${INSTANCE#} -X 'DELETE'
+
+Now you can monitor the app for auto healing
+$ cf app contactDataService
+
+
 ----
 . Stop the deployed application using the CLI
 +
