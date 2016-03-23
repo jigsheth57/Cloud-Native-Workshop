@@ -20,7 +20,7 @@ echo "App Domain: $appdomain"
 A_GUID=`cf curl /v2/apps?q=name:contactDataService | jsonValue guid 1 | sed -e 's/^[[:space:]]*//'`
 app_host=`cf curl /v2/apps/${A_GUID}/routes  | jsonValue host 1 | sed -e 's/^[[:space:]]*//'`
 echo "App Host: $app_host"
-csJSONStr={\"tag\":\"contact-service\",\"uri\":\"http://$app_host.$appdomain\"}
+csJSONStr={\"tag\":\"contact-service\",\"uri\":\"$app_host.$appdomain\"}
 echo \"$csJSONStr\"
 
 cf cups contact-service -p \"$csJSONStr\"
