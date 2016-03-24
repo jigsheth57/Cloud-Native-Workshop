@@ -389,7 +389,9 @@ image::rabbitMQ-queue-message.png[]
 
 ====
 
-== Interact with App from CF CLI
+====
+
+==== Interact with App from CF CLI
 
 . Get information about the currently deployed application using CLI apps command:
 +
@@ -434,3 +436,5 @@ $ cf stop <<app_name>>
 ----
 $ cf delete <<app_name>> -r
 ----
+
+====
