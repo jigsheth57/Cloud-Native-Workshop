@@ -411,6 +411,11 @@ $ cf app <<app_name>>
 ----
 $ cf scale <<app_name>> -i 2
 ----
+. Retrieve aggregated logs of the application using CLI instances command
++
+----
+$ cf logs <<app_name>>
+----
 . kill the container and see how PCF auto-heals it self
 +
 ----
