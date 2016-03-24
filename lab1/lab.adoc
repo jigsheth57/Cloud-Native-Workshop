@@ -431,12 +431,12 @@ Now you can monitor the app for auto healing
 $ cf app contactDataService
 
 ----
-. Stop the deployed application using the CLI
+. Stop the deployed application using the CLI **(DO NOT STOP IF YOU ARE PLANNING TO DO LAB 2)**
 +
 ----
 $ cf stop <<app_name>>
 ----
-. Delete the deployed application using the CLI
+. Delete the deployed application using the CLI **(DO NOT DELETE IF YOU ARE PLANNING TO DO LAB 2)**
 +
 ----
 $ cf delete <<app_name>> -r
