@@ -1,0 +1,5 @@
+io/pivotal/demo/config/WebSocketConfig.class
+io/pivotal/demo/controller/DataServiceController.class
+io/pivotal/demo/ContactWebAppApplication.class
+io/pivotal/demo/service/PublishMessage.class
+io/pivotal/demo/domain/Contact.class

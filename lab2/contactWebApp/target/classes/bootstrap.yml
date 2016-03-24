@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: contactWebApp
+  profiles:
+    active: local
+    

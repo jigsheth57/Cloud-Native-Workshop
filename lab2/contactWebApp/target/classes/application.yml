@@ -1,0 +1,26 @@
+logging:
+  level:
+    io.pivotal.demo: DEBUG
+server:
+  port: 8090
+
+contact:
+  dataservice:
+    endpoint: http://${vcap.services.contact-service.credentials.uri:localhost:8080}/contacts/
+    unavailable: '{"status":503,"data":"Service currently unavailable."}'
+
+spring:
+  rabbitmq:
+    host: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.host:localhost}
+    port: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.port:5672}
+    username: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.username:guest}
+    password: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.password:guest}
+    virtualHost: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.vhost:/}
+
+---
+spring:
+  profiles: local
+  
+---
+spring:
+  profiles: cloud
