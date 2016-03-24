@@ -353,35 +353,37 @@ http://contactdataservice-untippled-birthplace.cfapps.io/contacts:> get self
 }
 ----
 
+====
+
 == Test the backed data service app using Advance REST Client (Chrome App)
 
-.. Retrieve existing Contact
+. Retrieve existing Contact
 +
 image::advance-restclient-get.png[]
 
-.. Create new Contact
+. Create new Contact
 +
 image::advance-restclient-post.png[]
 
-.. Update existing Contact
+. Update existing Contact
 +
 image::advance-restclient-put.png[]
 
-.. Delete existing Contact
+. Delete existing Contact
 +
 image::advance-restclient-delete.png[]
 
 . See the publish events in RabbitMQ Management Console
 
-.. Access RabbitMQ Management Console
+. Access RabbitMQ Management Console
 +
 image::rabbitMQ-management-link.png[]
 
-.. Access the publish message queue
+. Access the publish message queue
 +
 image::rabbitMQ-queue-management.png[]
 
-.. Retrieve the publish message
+. Retrieve the publish message
 +
 image::rabbitMQ-queue-message.png[]
 
