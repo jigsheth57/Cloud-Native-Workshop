@@ -8,9 +8,11 @@ To learn more about the Spring Boot Web App using Spring Data JPA, take a look a
 
 == Target
 
+. If you haven't download the workshop project, link:++https://github.com/jigsheth57/Cloud-Native-Workshop/archive/master.zip++[click here to download] or you can clone the git project using git client (git clone https://github.com/jigsheth57/Cloud-Native-Workshop).
+
 . If you haven't already, download the latest release of the link:++https://github.com/cloudfoundry/cli/releases++[Cloud Foundry CLI] for your operating system and install it.
 
-. Optionally, you should install link:++https://github.com/spring-projects/rest-shell#readme++[Spring REST Shell] to test out the application. You can also use any other REST client that supports full set of HTTP Methods (PUT, POST, DELETE & GET) such as link:++https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo++[Advance REST Client]
+. Optionally, you should install link:++https://github.com/spring-projects/rest-shell#readme++[Spring REST Shell] by clicking on the link to test out the application. You can also use any other REST client that supports full set of HTTP Methods (PUT, POST, DELETE & GET) such as link:++https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo++[Advanced Rest Client Application] by clicking on the link.
 
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
@@ -68,7 +70,7 @@ You should see output similar to the following listing. Take a look at the listi
 ====
 [source,bash]
 ----
-Using manifest file /Users/jsheth/Documents/workspace/Spring-PCF-Workshop/lab 1/contactDataService/manifest.yml // <1>
+Using manifest file /Users/jsheth/Documents/workspace/Spring-PCF-Workshop/lab1/contactDataService/manifest.yml // <1>
 
 Creating app contactDataService in org Central / space jigsheth as jsheth@pivotal.io...
 OK // <2>
@@ -160,7 +162,7 @@ Take a look at `manifest.yml` to see how.
 <2> In most cases, the CLI indicates each Cloud Foundry API call as it happens.
 In this case, the CLI has created an application record for _Workshop_ in your assigned space.
 <3> All HTTP/HTTPS requests to applications will flow through Cloud Foundry's front-end router called http://docs.cloudfoundry.org/concepts/architecture/router.html[(Go)Router].
-Here the CLI is creating a route with random word tokens inserted (again, see `manifest.yml` for a hint!) to prevent route collisions across the default `devcloudwest.inbcu.com` domain.
+Here the CLI is creating a route with random word tokens inserted (again, see `manifest.yml` for a hint!) to prevent route collisions across the default `pcf5.cloud.fe.pivotal.io` domain.
 <4> Now the CLI is _binding_ the created route to the application.
 Routes can actually be bound to multiple applications to support techniques such as http://www.mattstine.com/2013/07/10/blue-green-deployments-on-cloudfoundry[blue-green deployments].
 <5> The CLI finally uploads the application bits to Pivotal Cloudfoundry. Notice that it's uploading _114 files_! This is because Cloud Foundry actually explodes a ZIP artifact before uploading it for caching purposes and uploads only files that has change from previous push.
@@ -355,7 +357,9 @@ http://contactdataservice-untippled-birthplace.cfapps.io/contacts:> get self
 
 ====
 
-== Test the backed data service app using Advance REST Client (Chrome App)
+== Test the back-end data service app using Advanced Rest Client Application (Chrome App)
+
+You can download the REST client that supports full set of HTTP Methods (PUT, POST, DELETE & GET) such as link:++https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo++[Advanced Rest Client Application] by clicking on the link.
 
 . Retrieve existing Contact
 +
@@ -375,15 +379,19 @@ image::advance-restclient-delete.png[]
 
 . See the publish events in RabbitMQ Management Console
 
-. Access RabbitMQ Management Console
+.. Login to App Console (https://login.pcf5.cloud.fe.pivotal.io/login) and click on the Manage link of RabbitMQ Service Instance
++
+image::appconsole.png[]
+
+.. Access RabbitMQ Management Console
 +
 image::rabbitMQ-management-link.png[]
 
-. Access the publish message queue
+.. Access the publish message queue
 +
 image::rabbitMQ-queue-management.png[]
 
-. Retrieve the publish message
+.. Retrieve the publish message
 +
 image::rabbitMQ-queue-message.png[]
 
