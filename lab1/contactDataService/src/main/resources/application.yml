@@ -1,8 +1,9 @@
 spring:
-  profiles.active: local
+  profiles:
+    active: local
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
   rabbitmq:
     host: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.host:localhost}
     port: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.port:5672}
@@ -17,7 +18,11 @@ logging:
 ---
 spring:
   profiles: local
-
+  datasource:
+    platform: h2
+  
 ---
 spring:
   profiles: cloud
+  datasource:
+    platform: mysql  

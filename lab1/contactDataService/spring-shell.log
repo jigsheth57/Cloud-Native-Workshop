@@ -82,3 +82,34 @@ post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Archite
 delete 4
 exit
 // rest-shell 1.0.1.BUILD-SNAPSHOT log closed at 2016-03-23 18:39:43
+// rest-shell 1.0.1.BUILD-SNAPSHOT log opened at 2016-03-31 00:00:01
+discover http://contactdataservice-pugilistic-lieutenant.pcf5.cloud.fe.pivotal.io/contacts
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+get self
+exit
+// rest-shell 1.0.1.BUILD-SNAPSHOT log closed at 2016-03-31 00:09:27
+// rest-shell 1.0.1.BUILD-SNAPSHOT log opened at 2016-03-31 00:12:27
+discover http://contactdataservice-pugilistic-lieutenant.pcf5.cloud.fe.pivotal.io/contacts
+get self
+delete 4
+delete 7
+delete 10
+get self
+post --data "{firstName: 'Peter', lastName: 'Sullivan', title: 'Platform Architect', email: 'pesullivan@pivotal.io', phone: '312-286-4891'}"
+get self
+get 1
+get 1
+get 1
+get self
+get self
+exit
+// rest-shell 1.0.1.BUILD-SNAPSHOT log closed at 2016-03-31 00:16:21
+// rest-shell 1.0.1.BUILD-SNAPSHOT log opened at 2016-03-31 00:26:53
+// [failed] discover http://192.168.99.100:8080/contacts
+discover http://192.168.99.100:8080/contacts
+exit
+// rest-shell 1.0.1.BUILD-SNAPSHOT log closed at 2016-03-31 00:33:16
+// rest-shell 1.0.1.BUILD-SNAPSHOT log opened at 2016-03-31 00:33:20
+// [failed] discover http://192.168.99.100:8080/contacts
+discover http://192.168.99.100:8080/contacts
+get 1

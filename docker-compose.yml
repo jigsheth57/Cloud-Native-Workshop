@@ -1,14 +1,17 @@
 contactDataService:
-  image: jigsheth57/spring-pcf:contactDataService
+  image: jigsheth57/contactdataservice:latest
   environment:
+    - SPRING_PROFILES_ACTIVE=local
     - SPRING_RABBITMQ_HOST=rabbitmq
   ports:
    - "8080:8080"
   links:
    - rabbitmq
 contactWebApp:
-  image: jigsheth57/spring-pcf:contactWebApp
+  image: jigsheth57/contactwebapp:latest
   environment:
+    - SPRING_PROFILES_ACTIVE=local
+    - CF_INSTANCE_INDEX=0
     - SPRING_RABBITMQ_HOST=rabbitmq
     - SPRING_RABBITMQ_PORT=5672
     - SPRING_RABBITMQ_USERNAME=guest
@@ -22,6 +25,7 @@ contactWebApp:
 rabbitmq:
   image: rabbitmq:3-management
   ports:
+  - "15671:15671"
   - "15672:15672"
   - "5672:5672"
   - "4369:4369"
