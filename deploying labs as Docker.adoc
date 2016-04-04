@@ -1,0 +1,49 @@
+= Deploying the labs as Docker Image into PCF
+
+----
+## Step 1) Create a RabbitMQ Service Instance name "p-rabbitmq"
+$ cf cs p-rabbitmq standard p-rabbitmq
+
+## Step 2) Push the Docker Image (https://hub.docker.com/r/jigsheth57/contactdataservice/tags/) with random route, but do NOT start
+$ cf p contactDataService -o jigsheth57/contactdataservice:latest --random-route -t 180 --no-start
+
+## Step 3) Bind RabbitMQ Service Instance created in Step 1
+$ cf bs contactDataService p-rabbitmq
+
+## Step 4) Set the environment variable "SPRING_PROFILES_ACTIVE" for the Docker Image app instance
+$ cf set-env contactDataService SPRING_PROFILES_ACTIVE cloud
+
+## Step 5) Start & Monitor the application instance (docker image)
+## Note: This may take time depending on the size of the Docker image.
+## Step 5a) Open up the other terminal window and tail the logs
+$ cf logs contactDataService
+## Step 5b) Start the application instance (docker image)
+$ cf st contactDataService
+
+## Step 6) Retrieve the full route to the application instance
+$ cf app contactDataService
+
+## Step 7) Create user-specified service instance with tag and uri from step 6
+$ cf cups contact-service -p "tag,uri"
+tag> contact-service
+uri> <<copy the uri from Step 6  e.g. "contactdataservice-castlelike-bhindi.local.pcfdev.io">>
+
+## Step 8) Push the Docker Image (https://hub.docker.com/r/jigsheth57/contactwebapp/tags/) with random route, but do NOT start
+$ cf p contactWebApp -o jigsheth57/contactwebapp:latest --random-route -t 180 --no-start
+
+## Step 9) Bind RabbitMQ Service Instance created in Step 1 & user-specified service instance created in Step 7
+$ cf bs contactWebApp p-rabbitmq
+$ cf bs contactWebApp contact-service
+
+## Step 10) Set the environment variable "SPRING_PROFILES_ACTIVE" for the Docker Image app instance
+$ cf set-env contactWebApp SPRING_PROFILES_ACTIVE cloud
+
+## Step 11) Start & Monitor the application instance (docker image)
+## Note: This may take time depending on the size of the Docker image.
+## Step 11a) Open up the other terminal window and tail the logs
+$ cf logs contactWebApp
+## Step 11b) Start the application instance (docker image)
+$ cf st contactWebApp
+
+## Step 12) Open up the URI to contactWebApp for instance: goto browser http://contactwebapp-unlarcenous-finery.local.pcfdev.io
+----

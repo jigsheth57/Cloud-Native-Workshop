@@ -113,3 +113,5 @@ exit
 // [failed] discover http://192.168.99.100:8080/contacts
 discover http://192.168.99.100:8080/contacts
 get 1
+exit
+// rest-shell 1.0.1.BUILD-SNAPSHOT log closed at 2016-03-31 00:58:41
