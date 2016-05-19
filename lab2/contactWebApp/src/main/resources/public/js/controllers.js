@@ -14,14 +14,15 @@ contactApp.controller('ContactListController', function($scope, $http) {
 		// when landing on the page, get all contacts and show them
 		$http.get('/contacts').success(function(data) {
 			console.log("response data: " + JSON.stringify(data));
-			$scope.contacts = data._embedded.contacts;
+			$scope.contacts = data;
 			$http.get('/env/CF_INSTANCE_INDEX').success(function(data) {
 				$scope.systemenv = data;
 				console.log('System Env CF_INSTANCE_INDEX: '+data);
 			}).error(function(data) {
 				console.log('Error: ' + data);
-				$scope.message = data.message;
-				$scope.error = data.code;
+				$scope.message = "";
+				$scope.error = "";
+				$scope.systemenv.CF_INSTANCE_INDEX = 0;
 			});
 		}).error(function(data) {
 			console.log('Error: ' + data);

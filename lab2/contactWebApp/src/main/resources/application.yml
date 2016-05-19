@@ -6,7 +6,7 @@ server:
 
 contact:
   dataservice:
-    endpoint: http://${vcap.services.contact-service.credentials.uri:localhost:8080}/contacts/
+    endpoint: http://${vcap.services.contact-service.credentials.uri:localhost:8080}
     unavailable: '{"status":503,"data":"Service currently unavailable."}'
 
 spring:

@@ -20,7 +20,7 @@ public class Contact {
 	@Column(nullable=false)
 	private String firstName, lastName, title, email, phone;
 	
-	private Contact() {}
+	public Contact() {}
 	
 	public Contact (String title, String firstName, String lastName, String email, String phone) {
 		this.title = title;

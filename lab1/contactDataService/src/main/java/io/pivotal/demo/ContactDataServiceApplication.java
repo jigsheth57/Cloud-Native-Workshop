@@ -7,8 +7,24 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.view.RedirectView;
+
+import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
+@EnableSwagger2
+@ComponentScan("io.pivotal.demo")
+@Controller
 public class ContactDataServiceApplication {
 
 	final static String queueName = "contact-change-event";
@@ -35,4 +51,32 @@ public class ContactDataServiceApplication {
 		log.debug("amqp password: "+amqp_password);
 		return new Queue(queueName);
 	}
+
+    @Bean
+    public Docket newsApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+        		.apiInfo(apiInfo())
+        		.select()                                  
+                .apis(RequestHandlerSelectors.any())              
+                .paths(PathSelectors.any())                          
+                .build();  
+    }
+     
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder()
+                .title("Event-Driven Contact Data Service sample")
+                .description("Event-Driven Contact Data Service demo using Spring JPA, REST, AMQP with Swagger")
+                .termsOfServiceUrl("http://pivotal.io/")
+                .contact(new Contact("Jignesh Sheth",null,null))
+                .license("Apache License Version 2.0")
+                .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0")
+                .version("2.0")
+                .build();
+    }
+    
+	@RequestMapping("/")
+	public String home() {
+		return "redirect:/swagger-ui.html";
+	}
+
 }

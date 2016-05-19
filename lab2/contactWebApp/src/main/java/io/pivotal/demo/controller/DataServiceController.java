@@ -34,23 +34,23 @@ public class DataServiceController {
 
 	@RequestMapping(value = "/contacts", method = RequestMethod.GET)
 	public @ResponseBody String getAllContacts() {
-		return restTemplate.getForObject(contactDataserviceEP, String.class);
+		return restTemplate.getForObject(contactDataserviceEP+"/contacts", String.class);
 	}
 
 	@RequestMapping(value = "/contacts/search/findByFirstNameOrLastName/{name}", method = RequestMethod.GET)
 	public @ResponseBody String searchContacts(@PathVariable("name") final String name) {
 		logger.debug("{searchContacts} search existing contact("+name+")!");
-		String url = contactDataserviceEP+"search/findByFirstNameOrLastName";
+		String url = contactDataserviceEP+"/contact";
 		UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(url);
-		builder.queryParam("firstName", name);
-		builder.queryParam("lastName", name);
+		builder.queryParam("fname", name);
+		builder.queryParam("lname", name);
 		return restTemplate.getForObject(builder.build().encode().toUri(), String.class);
 	}
 
 	@RequestMapping(value = "/contacts", method = RequestMethod.POST)
 	public @ResponseBody String createContact(@RequestBody final Contact contact) {
 		String result = unavailable;
-		result = restTemplate.postForObject(contactDataserviceEP, contact,
+		result = restTemplate.postForObject(contactDataserviceEP+"/contact", contact,
 				String.class);
 		logger.debug("result: " + result);
 		return result;
@@ -62,7 +62,7 @@ public class DataServiceController {
 		String result = unavailable;
 		logger.debug("{updateContact} Updating existing contact("+contactId+")!");
 		logger.debug(contact.toString());
-		restTemplate.put(contactDataserviceEP + contactId, contact);
+		restTemplate.put(contactDataserviceEP +"/contact/"+ contactId, contact);
 		result = contact.toString();
 		return result;
 	}
@@ -76,12 +76,12 @@ public class DataServiceController {
 		switch (method) {
 		case "delete":
 			logger.debug("{rdContact} Deleting existing contact("+contactId+")!");
-			restTemplate.delete(contactDataserviceEP+contactId);
+			restTemplate.delete(contactDataserviceEP+"/contact/"+contactId);
 			result = "{\"status\":204,\"data\":\"Successful delete contact "+contactId+"\"}";
 			break;
 		default:
 			logger.debug("{rdContact} Retrieving existing contact("+contactId+")!");
-			result = restTemplate.getForObject(contactDataserviceEP+contactId, String.class);
+			result = restTemplate.getForObject(contactDataserviceEP+"/contact/"+contactId, String.class);
 			break;
 		}
 		return result;
