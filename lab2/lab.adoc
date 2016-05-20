@@ -12,7 +12,7 @@ This application is a front-end mobile-first Web Application for the Contact Dat
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
 ----
-$ cf api https://api.pcf5.cloud.fe.pivotal.io --skip-ssl-validation
+$ cf api https://api.local.pcfdev.io --skip-ssl-validation
 ----
 
 . Login to Pivotal Cloudfoundry:
@@ -21,7 +21,7 @@ $ cf api https://api.pcf5.cloud.fe.pivotal.io --skip-ssl-validation
 $ cf login
 ----
 +
-Follow the prompts
+Follow the prompts (Note: login as "admin" and password as "admin" for local pcfdev)
 
 == Push It!
 
@@ -39,7 +39,7 @@ $ cf cups contact-service -p "tag,uri"
 
 tag> contact-service
 
-uri> contactdataservice-didactic-sleight.pcf5.cloud.fe.pivotal.io
+uri> contactdataservice-didactic-sleight.local.pcfdev.io
 
 Creating user provided service contact-service in org Workshop / space jsheth@pivotal.io as jsheth@pivotal.io...
 OK
@@ -55,7 +55,7 @@ You should see output similar to the following listing. Take a look at the listi
 +
 ====
 ----
-Using manifest file /Users/jsheth/Documents/workspace/Spring-PCF-Workshop/lab 2/contactWebApp/manifest.yml <1>
+Using manifest file /Users/jsheth/Documents/workspace/Spring-PCF-Workshop/lab2/contactWebApp/manifest.yml <1>
 
 Creating app contactWebApp in org Central / space jigsheth as jsheth@pivotal.io...
 OK <2>
