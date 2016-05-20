@@ -24,6 +24,13 @@ contactApp.controller('ContactListController', function($scope, $http) {
 				$scope.error = "";
 				$scope.systemenv.CF_INSTANCE_INDEX = 0;
 			});
+			$http.get('/sessionid').success(function(data) {
+				$scope.sessionid = data.sessionid;
+			}).error(function(data) {
+				console.log('Error: ' + data);
+				$scope.message = "";
+				$scope.error = "";
+			});
 		}).error(function(data) {
 			console.log('Error: ' + data);
 			$scope.message = data.message;

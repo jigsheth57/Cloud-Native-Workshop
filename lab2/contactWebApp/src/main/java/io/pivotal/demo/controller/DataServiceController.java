@@ -86,4 +86,11 @@ public class DataServiceController {
 		}
 		return result;
 	}
+
+	@RequestMapping(value = "/sessionid", method = RequestMethod.GET)
+	public @ResponseBody String getSessionId() {
+	    RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
+	    HttpServletRequest request = ((ServletRequestAttributes)requestAttributes).getRequest();
+		return "{ \"sessionid\":\""+request.getSession().getId()+"\"}";
+	}
 }

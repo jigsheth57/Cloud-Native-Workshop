@@ -32,29 +32,29 @@ public class LogListener {
 	@PostPersist
     private void postCreateEvent(Object object) {
     	String message = "{\"Status\": \"PostCreate\", \"Date\": \""+dx.format(new Date())+"\", \"Contact\": "+object+"}";
-    	log.debug(message);
     	postMessage(message);
     }
     
 	@PostUpdate
     private void postUpdateEvent(Object object) {
     	String message = "{\"Status\": \"PostUpdate\", \"Date\": \""+dx.format(new Date())+"\", \"Contact\": "+object+"}";
-    	log.debug(message);
     	postMessage(message);
     }
     
     @PostRemove
     private void postRemoveEvent(Object object) {
     	String message = "{\"Status\": \"PostRemove\", \"Date\": \""+dx.format(new Date())+"\", \"Contact\": "+object+"}";
-    	log.debug(message);
     	postMessage(message);
     }
 
     private void postMessage(String message) {
-		ConnectionFactory conn = rabbitTemplate.getConnectionFactory();
+/*
+    	ConnectionFactory conn = rabbitTemplate.getConnectionFactory();
 		log.debug("RabbitMQ Host:"+conn.getHost());
 		log.debug("RabbitMQ Port:"+conn.getPort());
 		log.debug("RabbitMQ VirtualHost:"+conn.getVirtualHost());
+*/		
+    	log.debug(message);
     	rabbitTemplate.convertAndSend(queueName, message);
     }
     
