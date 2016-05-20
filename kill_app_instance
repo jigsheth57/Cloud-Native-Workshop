@@ -8,7 +8,8 @@ function jsonValue() {
 
 if [ -n "$2" ]
 then
-  A_GUID=`cf curl /v2/apps?q=name:$1 | jsonValue guid 1 | sed -e 's/^[[:space:]]*//'`
+##  A_GUID=`cf curl /v2/apps?q=name:$1 | jsonValue guid 1 | sed -e 's/^[[:space:]]*//'`
+  A_GUID=`cf app $1 --guid`
   app_url=/v2/apps/${A_GUID}/instances/$2
   echo "Stopping instance: ${app_url}"
   cf curl $app_url -X 'DELETE'
