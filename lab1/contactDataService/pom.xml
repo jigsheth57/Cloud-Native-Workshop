@@ -39,6 +39,7 @@
 		<java.version>1.8</java.version>
 		<docker.image.prefix>jigsheth57</docker.image.prefix>
 		<docker.repo>contactdataservice</docker.repo>
+		<docker.tag>latest</docker.tag>
 	</properties>
 
 	<dependencies>
@@ -53,13 +54,19 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+	        <exclusions>
+	            <exclusion>
+	                <groupId>org.apache.tomcat.embed</groupId>
+	                <artifactId>tomcat-embed-websocket</artifactId>
+	            </exclusion>
+	        </exclusions>
         </dependency>
-<!-- 		
+<!--
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
--->		
+-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
@@ -98,14 +105,13 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-<!--
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.2.3</version>
 				<configuration>
-					<imageName>${docker.image.prefix}/${docker.repo}:latest</imageName>
-					<dockerDirectory>src/main/docker</dockerDirectory>
+					<imageName>${docker.image.prefix}/${docker.repo}:${docker.tag}</imageName>
+					<dockerDirectory>.</dockerDirectory>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
@@ -115,7 +121,6 @@
 					</resources>
 				</configuration>
 			</plugin>
--->			
 		</plugins>
 	</build>
 

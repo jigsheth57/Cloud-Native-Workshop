@@ -46,10 +46,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-rest</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+	        <exclusions>
+	            <exclusion>
+	                <groupId>org.apache.tomcat.embed</groupId>
+	                <artifactId>tomcat-embed-websocket</artifactId>
+	            </exclusion>
+	        </exclusions>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -80,10 +86,6 @@
 			<version>RELEASE</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>commons-httpclient</groupId>
 			<artifactId>commons-httpclient</artifactId>
 			<version>3.1</version>
@@ -96,14 +98,13 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-<!--
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.2.3</version>
 				<configuration>
 					<imageName>${docker.image.prefix}/${docker.repo}:latest</imageName>
-					<dockerDirectory>src/main/docker</dockerDirectory>
+					<dockerDirectory>.</dockerDirectory>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
@@ -113,7 +114,6 @@
 					</resources>
 				</configuration>
 			</plugin>
--->			
 		</plugins>
 	</build>
 
