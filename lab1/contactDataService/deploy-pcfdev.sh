@@ -25,3 +25,9 @@ csJSONStr={\"tag\":\"contact-service\",\"uri\":\"$app_fqdn\"}
 echo \"$csJSONStr\"
 
 cf cups contact-service -p \"$csJSONStr\"
+if [ "$?" -ne "0" ]; then
+  cf update-user-provided-service contact-service -p \"$csJSONStr\"
+  if [ "$?" -ne "0" ]; then
+    exit $?
+  fi
+fi
