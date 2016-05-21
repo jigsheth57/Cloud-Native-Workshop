@@ -11,6 +11,7 @@ contactWebApp:
   image: jigsheth57/contactwebapp:latest
   environment:
     - SPRING_PROFILES_ACTIVE=local
+    - SPRING_REDIS_HOST=redis
     - CF_INSTANCE_INDEX=0
     - SPRING_RABBITMQ_HOST=rabbitmq
     - SPRING_RABBITMQ_PORT=5672
@@ -21,6 +22,7 @@ contactWebApp:
    - "8090:8090"
   links:
    - rabbitmq
+   - redis
    - contactDataService
 rabbitmq:
   image: rabbitmq:3-management
@@ -31,3 +33,7 @@ rabbitmq:
   - "4369:4369"
   - "5671:5671"
   - "25672:25672"
+redis:
+  image: redis:latest
+  ports:
+    - "6379:6379"
