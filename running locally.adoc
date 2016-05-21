@@ -1,6 +1,8 @@
 = Running the labs locally
 
-You will need to link:++https://docs.docker.com/engine/installation/++[install Docker]
+You can link:++http://pivotal.io/platform/pcf-tutorials/getting-started-with-pivotal-cloud-foundry-dev/introduction++[run PCF on your Local Workstation with PCF Dev] and follow the lab instruction in deploying the apps to local PCFDev.
+
+You can also run locally using Docker integration. You will need to link:++https://docs.docker.com/engine/installation/++[install Docker]
 
 Once Docker is installed, start up the Docker CLI
 
