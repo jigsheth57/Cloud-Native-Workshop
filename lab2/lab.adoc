@@ -205,13 +205,14 @@ $ cf app contactWebApp
 . Stop the deployed application using the CLI
 +
 ----
-$ cf stop contactWebApp
+$ cf sp contactWebApp
+$ cf sp contactDataService
 ----
-
 . Delete the deployed application using the CLI
 +
 ----
-$ cf delete contactWebApp -r
+$ cf d -r contactWebApp
+$ cf d -r contactDataService
 ----
 . Delete the service instances created previously using the CLI
 +
