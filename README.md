@@ -10,5 +10,5 @@ The session includes presentations, demos and hands-on labs. It will cover gener
 * Session 2: [Pivotal Cloud Foundry Architecture and Operations](presentations/Session_2_Architecture_And_Operations.pdf)
 
 * Developer Workshop
-  * Lab 1 - [From Zero to Pushing Your First Application \(Event-Driven Data Service using Spring Boot, JPA & AMQP\)](lab1/lab.adoc)
-  * Lab 2 - [Responsive Web UI for Your Data Service Application](lab2/lab.adoc)
+  * Lab 1 - [From Zero to Pushing Your First Application \(Event-Driven Data Service using Spring Boot, JPA & AMQP\)](lab1/readme.adoc)
+  * Lab 2 - [Responsive Web UI for Your Data Service Application](lab2/readme.adoc)
