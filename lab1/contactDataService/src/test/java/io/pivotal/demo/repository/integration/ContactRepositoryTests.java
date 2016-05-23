@@ -9,6 +9,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import io.pivotal.demo.ContactDataServiceApplication;
 import io.pivotal.demo.domain.Contact;
@@ -32,6 +33,7 @@ import junit.framework.TestCase;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = ContactDataServiceApplication.class)
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
+@WebAppConfiguration
 public class ContactRepositoryTests {
 
 	//The repository to test.

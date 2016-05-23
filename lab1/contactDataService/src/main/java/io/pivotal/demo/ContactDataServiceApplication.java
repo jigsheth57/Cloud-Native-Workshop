@@ -3,7 +3,9 @@ package io.pivotal.demo;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.amqp.core.Queue;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -11,6 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import io.pivotal.demo.repository.ContactRepository;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -24,10 +27,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @ComponentScan("io.pivotal.demo")
 @Controller
-public class ContactDataServiceApplication {
+public class ContactDataServiceApplication implements CommandLineRunner {
 
 	final static String queueName = "contact-change-event";
 	private static final Log log = LogFactory.getLog(ContactDataServiceApplication.class);
+	@Autowired
+	protected ContactRepository contactRepo;
 	
 	@Value("${spring.rabbitmq.host}")
 	String amqp_host;
@@ -76,6 +81,21 @@ public class ContactDataServiceApplication {
 	@RequestMapping("/")
 	public String home() {
 		return "redirect:/swagger-ui.html";
+	}
+
+	@Override
+	public void run(String... arg0) throws Exception {
+		long size = contactRepo.count();
+		if(size == 0) {
+			final String title = "Mr.";
+			final String firstName = "Jig";
+			final String lastName = "Sheth";
+			final String email = "jigsheth@pivotal.io";
+			final String phone = "312-555-1212";
+			io.pivotal.demo.domain.Contact newContact = new io.pivotal.demo.domain.Contact(title, firstName, lastName, email, phone);
+			contactRepo.save(newContact);
+		}
+		
 	}
 
 }
