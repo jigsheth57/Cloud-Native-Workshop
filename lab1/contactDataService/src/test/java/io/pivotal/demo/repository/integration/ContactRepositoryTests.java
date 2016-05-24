@@ -13,6 +13,8 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import io.pivotal.demo.ContactDataServiceApplication;
 import io.pivotal.demo.domain.Contact;
+import io.pivotal.demo.domain.Phone;
+import io.pivotal.demo.domain.PhoneType;
 import io.pivotal.demo.repository.ContactRepository;
 import junit.framework.TestCase;
 
@@ -82,7 +84,7 @@ public class ContactRepositoryTests {
 		final String firstName = "firstName";
 		final String lastName = "lastName";
 		final String email = "email";
-		final String phone = "phone";
+		final Phone phone = new Phone(PhoneType.work,"312-555-1212");
 		Contact newContact = new Contact(title, firstName, lastName, email, phone);
 		newContact = contactRepo.save(newContact);
 		Contact savedContact = 
@@ -96,7 +98,7 @@ public class ContactRepositoryTests {
 		TestCase.assertEquals(
 				email, savedContact.getEmail());
 		TestCase.assertEquals(
-				phone, savedContact.getPhone());
+				phone.toString(), savedContact.getPhone().toString());
 	}
 
 	/**
@@ -113,15 +115,16 @@ public class ContactRepositoryTests {
 		final String firstName = "firstName";
 		final String lastName = "lastName";
 		final String email = "email";
-		final String phone = "phone";
+		final Phone phone = new Phone(PhoneType.work,"312-555-1212");
 		Contact newContact = new Contact(title, firstName, lastName, email, phone);
 		newContact = contactRepo.save(newContact);
 		Contact updatedContact = newContact;
+		Phone updatedPhone = new Phone(PhoneType.work,"312-555-1212");
 		updatedContact.setTitle(title+"_updated");
 		updatedContact.setFirstName(firstName+"_updated");
 		updatedContact.setLastName(lastName+"_updated");
 		updatedContact.setEmail(email+"_updated");
-		updatedContact.setPhone(phone+"_updated");
+		updatedContact.setPhone(updatedPhone);
 		updatedContact = contactRepo.save(updatedContact);
 		Contact savedContact = 
 				contactRepo.findOne(updatedContact.getId());
@@ -134,7 +137,7 @@ public class ContactRepositoryTests {
 		TestCase.assertEquals(
 				email+"_updated", savedContact.getEmail());
 		TestCase.assertEquals(
-				phone+"_updated", savedContact.getPhone());
+				updatedPhone.toString(), savedContact.getPhone().toString());
 	}
 
 	/**
@@ -151,7 +154,7 @@ public class ContactRepositoryTests {
 		final String firstName = "firstName";
 		final String lastName = "lastName";
 		final String email = "email";
-		final String phone = "phone";
+		final Phone phone = new Phone(PhoneType.work,"312-555-1212");
 		Contact newContact = new Contact(title, firstName, lastName, email, phone);
 		newContact = contactRepo.save(newContact);
 		Long contactID = newContact.getId();

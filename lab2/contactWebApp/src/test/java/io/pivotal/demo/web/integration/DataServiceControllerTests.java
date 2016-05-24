@@ -24,6 +24,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.pivotal.demo.ContactWebAppApplication;
 import io.pivotal.demo.domain.Contact;
+import io.pivotal.demo.domain.Phone;
+import io.pivotal.demo.domain.PhoneType;
 import junit.framework.TestCase;
 
 /**
@@ -71,7 +73,7 @@ public class DataServiceControllerTests {
 					.andExpect(MockMvcResultMatchers.status().isOk())
 					.andDo(MockMvcResultHandlers.print())
 					.andExpect(MockMvcResultMatchers.content().contentType("text/plain;charset=UTF-8"))
-					.andExpect(MockMvcResultMatchers.jsonPath("$._embedded.contacts").isArray());
+					.andExpect(MockMvcResultMatchers.jsonPath("$").isArray());
 		} catch (Exception e) {
 			log.error(e);
 			TestCase.fail(e.getMessage());
@@ -101,7 +103,7 @@ public class DataServiceControllerTests {
 	 */
 	@Test
 	public void testSaveContact() {
-		Contact contact = new Contact("title", "firstName", "lastName", "email", "phone");
+		Contact contact = new Contact("title", "firstName", "lastName", "email", new Phone(PhoneType.work,"312-555-1212"));
 		try {
 			this.mvc.perform(
 					MockMvcRequestBuilders.post("/contacts")

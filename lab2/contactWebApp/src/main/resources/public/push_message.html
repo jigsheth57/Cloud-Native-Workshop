@@ -29,8 +29,8 @@
 							<th>Id</th>
 							<th>Name</th>
 							<th>Title</th>
-							<th>Phone</th>
 							<th>Email</th>
+							<th>Phone</th>
 						</tr>
 					</thead>
 					<tbody id="messages">
@@ -68,9 +68,9 @@
 									messageList.append("<td>"
 											+ message.Contact.title + "</td>");
 									messageList.append("<td>"
-											+ message.Contact.phone + "</td>");
-									messageList.append("<td>"
 											+ message.Contact.email + "</td>");
+									messageList.append("<td>"
+											+ message.Contact.phone.type + ": " + message.Contact.phone.value + "</td>");
 									messageList.append("</tr>");
 								});
 					});

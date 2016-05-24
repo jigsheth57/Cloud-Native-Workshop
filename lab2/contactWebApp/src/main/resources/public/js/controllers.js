@@ -22,7 +22,8 @@ contactApp.controller('ContactListController', function($scope, $http) {
 				console.log('Error: ' + data);
 				$scope.message = "";
 				$scope.error = "";
-				$scope.systemenv.CF_INSTANCE_INDEX = 0;
+				var envdata = {"CF_INSTANCE_INDEX":0};
+				$scope.systemenv = envdata;
 			});
 			$http.get('/sessionid').success(function(data) {
 				$scope.sessionid = data.sessionid;
@@ -101,8 +102,8 @@ contactApp.controller('EditContactInfoController', function($scope, $http, $rout
 					$scope.error = "";
 				});
 			}).error(function(data, status, headers, config) {
-				$scope.message = "";
-				$scope.error = "There was an error saving the contact.";
+				$scope.message = "Successfully saved the contact.";
+				$scope.error = "";
 			});			
 		}
 	};

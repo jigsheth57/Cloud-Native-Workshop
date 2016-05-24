@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import io.pivotal.demo.domain.Contact;
+import io.pivotal.demo.domain.Phone;
+import io.pivotal.demo.domain.PhoneType;
 import junit.framework.TestCase;
 
 /**
@@ -23,7 +25,7 @@ public class ContactTests {
 	 */
 	@Before
 	public void buildContact() {
-		contact = new Contact("title", "firstName", "lastName", "email", "phone");
+		contact = new Contact("title", "firstName", "lastName", "email", new Phone(PhoneType.work,"312-555-1212"));
 	}
 	
 	/**

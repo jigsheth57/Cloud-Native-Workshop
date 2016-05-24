@@ -13,6 +13,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import io.pivotal.demo.domain.Phone;
+import io.pivotal.demo.domain.PhoneType;
 import io.pivotal.demo.repository.ContactRepository;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -91,7 +93,7 @@ public class ContactDataServiceApplication implements CommandLineRunner {
 			final String firstName = "Jig";
 			final String lastName = "Sheth";
 			final String email = "jigsheth@pivotal.io";
-			final String phone = "312-555-1212";
+			final Phone phone = new Phone(PhoneType.work,"312-555-1212");
 			io.pivotal.demo.domain.Contact newContact = new io.pivotal.demo.domain.Contact(title, firstName, lastName, email, phone);
 			contactRepo.save(newContact);
 		}

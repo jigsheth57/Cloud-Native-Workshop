@@ -1,6 +1,7 @@
 package io.pivotal.demo.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
@@ -18,11 +19,17 @@ public class Contact {
 	private Long Id;
 	
 	@Column(nullable=false)
-	private String firstName, lastName, title, email, phone;
+	private String firstName, lastName;
+	
+	@Column(nullable=true)
+	private String title, email;
+	
+	@Embedded
+	private Phone phone;
 	
 	public Contact() {}
 	
-	public Contact (String title, String firstName, String lastName, String email, String phone) {
+	public Contact (String title, String firstName, String lastName, String email, Phone phone) {
 		this.title = title;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -70,11 +77,11 @@ public class Contact {
 		this.email = email;
 	}
 
-	public String getPhone() {
+	public Phone getPhone() {
 		return phone;
 	}
 
-	public void setPhone(String phone) {
+	public void setPhone(Phone phone) {
 		this.phone = phone;
 	}
 
