@@ -2,7 +2,7 @@
 CF_APP='contactWebApp'
 CF_APPS_DOMAIN='local.pcfdev.io'
 
-mvn clean install package
+mvn clean install package -D skipTests
 if [ "$?" -ne "0" ]; then
   exit $?
 fi

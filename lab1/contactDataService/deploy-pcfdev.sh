@@ -25,7 +25,7 @@ if [ ! -z "$DEPLOYED_VERSION" ]; then
   # Scaling down
   cf scale "$CF_APP-$DEPLOYED_VERSION" -i 1
 fi
-app_fqdn=`cf app "$CF_APP-$CURRENT_VERSION" | awk '/urls: / {print $2}'`
+app_fqdn=`cf app "$CF_APP-$CURRENT_VERSION" | awk '/urls: / {print $2}' | sed 's/,//g'`
 csJSONStr={\"tag\":\"contact-service\",\"uri\":\"$app_fqdn\"}
 echo \"$csJSONStr\"
 
