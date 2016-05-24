@@ -89,11 +89,11 @@ public class ContactDataServiceApplication implements CommandLineRunner {
 	public void run(String... arg0) throws Exception {
 		long size = contactRepo.count();
 		if(size == 0) {
-			final String title = "Mr.";
+			final String title = "Sr. Platform Architect";
 			final String firstName = "Jig";
 			final String lastName = "Sheth";
 			final String email = "jigsheth@pivotal.io";
-			final Phone phone = new Phone(PhoneType.work,"312-555-1212");
+			final Phone phone = new Phone(PhoneType.work,"650-846-1600");
 			io.pivotal.demo.domain.Contact newContact = new io.pivotal.demo.domain.Contact(title, firstName, lastName, email, phone);
 			contactRepo.save(newContact);
 		}
