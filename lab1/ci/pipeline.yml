@@ -43,6 +43,6 @@ jobs:
     passed: [unit-test]
     trigger: true
   - put: lab-release
-    params: {file: lab-repo/lab1/contactDataService/target/contactDataService-*.jar}
+    params: {file: build-artifact/contactDataService-*.jar}
   - put: version
     params: {file: version/number}
