@@ -12,3 +12,8 @@ mvn package -DskipTests=true -Djava.version=1.7
 rabbitmqctl status
 
 mvn test
+
+pwd
+ls -laF target/*.jar
+mv target/*.jar ../../../build-artifact
+ls -laF ../../../build-artifact
