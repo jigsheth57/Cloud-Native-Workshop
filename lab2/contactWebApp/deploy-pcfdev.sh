@@ -1,6 +1,7 @@
 #!/bin/bash
 CF_APP='contactWebApp'
-CF_APPS_DOMAIN='local.pcfdev.io'
+#CF_APPS_DOMAIN='local.pcfdev.io'
+CF_APPS_DOMAIN='app.azure.sada-pcf.net'
 
 mvn clean install package -D skipTests
 if [ "$?" -ne "0" ]; then

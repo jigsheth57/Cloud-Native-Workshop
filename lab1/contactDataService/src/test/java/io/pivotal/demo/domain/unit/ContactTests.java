@@ -18,7 +18,7 @@ public class ContactTests {
 
 	private Contact contact;
 	
-	private static final String CONTACT_TO_JSON_PATTERN = "{\"Id\": %d, \"title\": \"%s\", \"firstName\": \"%s\", \"lastName\": \"%s\", \"email\": \"%s\", \"phone\": \"%s\"}";
+	private static final String CONTACT_TO_JSON_PATTERN = "{\"Id\": %d, \"title\": \"%s\", \"firstName\": \"%s\", \"lastName\": \"%s\", \"email\": \"%s\", \"phone\": %s}";
 	
 	/**
 	 * Builds the Contact object to test

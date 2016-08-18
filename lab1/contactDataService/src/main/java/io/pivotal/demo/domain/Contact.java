@@ -88,7 +88,7 @@ public class Contact {
 	@Override
 	public String toString() {
 		return String.format(
-				"{\"Id\": %d, \"title\": \"%s\", \"firstName\": \"%s\", \"lastName\": \"%s\", \"email\": \"%s\", \"phone\": \"%s\"}",
+				"{\"Id\": %d, \"title\": \"%s\", \"firstName\": \"%s\", \"lastName\": \"%s\", \"email\": \"%s\", \"phone\": %s}",
 				Id, 
 				title, 
 				firstName,

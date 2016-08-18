@@ -54,7 +54,7 @@ public class ContactController {
 
 	}
 	
-    @RequestMapping(path="/contact", method = RequestMethod.GET)
+    @RequestMapping(value ="/contact", method = RequestMethod.GET)
     @ApiOperation(value = "Retrieve contact by either firstname or lastname.",notes = "Calls contact repository to retrieve contact by either searching for firstname or lastname.", response = Contact.class, responseContainer = "List")
     @ApiImplicitParams({
         @ApiImplicitParam(name = "fname", value = "Contact's firstname", required = false, dataType = "string", paramType = "query", defaultValue="Jig"),
