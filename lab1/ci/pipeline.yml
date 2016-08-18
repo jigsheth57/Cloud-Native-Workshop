@@ -11,7 +11,7 @@ resources:
   type: semver
   source:
     bucket: ci-pcf-workshop-artifacts
-    key: current-version
+    key: lab-current-version
     access_key_id: {{s3-access-key-id}}
     secret_access_key: {{s3-secret-access-key}}
     initial_version: 1.0.0
@@ -30,18 +30,22 @@ jobs:
   plan:
   - get: lab-repo
     trigger: true
-  - get: version
-    params: {bump: patch}
   - task: unit-test
     file: lab-repo/lab1/ci/tasks/unit-test.yml
+    timeout: 5m
 
-- name: publish-binary
+- name: build-binary
   public: true
   serial: true
   plan:
   - get: lab-repo
     passed: [unit-test]
     trigger: true
+  - get: version
+    params: {bump: patch}
+  - task: build-artifact
+    file: lab-repo/lab1/ci/tasks/build-artifact.yml
+    timeout: 5m
   - put: lab-release
     params: {file: build-artifact/contactDataService-*.jar}
   - put: version

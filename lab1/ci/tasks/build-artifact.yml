@@ -7,9 +7,10 @@ image_resource:
 
 inputs:
   - name: lab-repo
+  - name: version
 
 outputs:
   - name: build-artifact
 
 run:
-  path: lab-repo/lab1/ci/tasks/unit-test.sh
+  path: lab-repo/lab1/ci/tasks/build-artifact.sh
