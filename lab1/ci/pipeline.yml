@@ -50,3 +50,15 @@ jobs:
     params: {file: build-artifact/contactDataService-*.jar}
   - put: version
     params: {file: version/number}
+
+- name: acceptance-tests
+  plan:
+  - aggregate:
+    - get: lab-release
+      passed: [build-binary]
+      trigger: true
+    - get: lab-repo
+      passed: [build-binary]
+      trigger: true
+  - task: deploy-to-dev
+    file: lab-repo/lab1/ci/tasks/cf-deployment.yml
