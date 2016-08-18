@@ -9,4 +9,4 @@ inputs:
   - name: lab-repo
 
 run:
-  path: lab-repo/ci/tasks/unit-test.sh
+  path: lab-repo/lab1/ci/tasks/unit-test.sh
