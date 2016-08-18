@@ -1,0 +1,17 @@
+---
+resources:
+- name: lab-repo
+  type: git
+  source:
+    uri: git@github.com:jigsheth57/Cloud-Native-Workshop.git
+    branch: master
+    private_key: {{git_private_key}}
+
+jobs:
+- name: unit-test
+  public: true
+  plan:
+  - get: lab-repo
+    trigger: true
+  - task: unit-test
+    file: lab-repo/lab1/ci/tasks/unit-test.yml
