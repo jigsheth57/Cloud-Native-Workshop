@@ -2,16 +2,13 @@ package io.pivotal.demo.repository.integration;
 
 import java.util.List;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.annotation.DirtiesContext.ClassMode;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import io.pivotal.demo.ContactDataServiceApplication;
 import io.pivotal.demo.domain.Contact;
 import io.pivotal.demo.domain.Phone;
 import io.pivotal.demo.domain.PhoneType;
@@ -32,15 +29,20 @@ import junit.framework.TestCase;
  * @author Jignesh Sheth
  *
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = ContactDataServiceApplication.class)
-@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
-@WebAppConfiguration
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class ContactRepositoryTests {
+	
+	public static Contact contact = new Contact("title", "firstName", "lastName", "email", new Phone(PhoneType.work,"312-555-1212"));
 
 	//The repository to test.
 	@Autowired
 	ContactRepository contactRepo;
+
+	@Before
+	public void setUp() {
+		contact = contactRepo.save(contact);
+	}
 	
 	/**
 	 * Tests the repository's findAll method, by asserting that
@@ -110,16 +112,13 @@ public class ContactRepositoryTests {
 	 */
 	@Test
 	public void testUpdateExisting() {
-		
-		final String title = "title";
-		final String firstName = "firstName";
-		final String lastName = "lastName";
-		final String email = "email";
-		final Phone phone = new Phone(PhoneType.work,"312-555-1212");
-		Contact newContact = new Contact(title, firstName, lastName, email, phone);
-		newContact = contactRepo.save(newContact);
-		Contact updatedContact = newContact;
-		Phone updatedPhone = new Phone(PhoneType.work,"312-555-1212");
+		String title = contact.getTitle();
+		String firstName = contact.getFirstName();
+		String lastName = contact.getLastName();
+		String email = contact.getEmail();
+		Phone phone = contact.getPhone();
+		Contact updatedContact = contact;
+		Phone updatedPhone = new Phone(PhoneType.main,"312-555-1212");
 		updatedContact.setTitle(title+"_updated");
 		updatedContact.setFirstName(firstName+"_updated");
 		updatedContact.setLastName(lastName+"_updated");
@@ -150,17 +149,9 @@ public class ContactRepositoryTests {
 	@Test
 	public void testDelete() {
 		
-		final String title = "title";
-		final String firstName = "firstName";
-		final String lastName = "lastName";
-		final String email = "email";
-		final Phone phone = new Phone(PhoneType.work,"312-555-1212");
-		Contact newContact = new Contact(title, firstName, lastName, email, phone);
-		newContact = contactRepo.save(newContact);
-		Long contactID = newContact.getId();
-		contactRepo.delete(contactID);
+		contactRepo.delete(contact.getId());
 		Contact savedContact = 
-				contactRepo.findOne(contactID);
+				contactRepo.findOne(contact.getId());
 		TestCase.assertNull(savedContact);
 	}
 }

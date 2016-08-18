@@ -4,9 +4,7 @@ set -x
 # login to PWS
 echo "Login to PWS ....."
 
-target="cf login -a $API_ENDPOINT -u $USERNAME -p $PASSWORD -o $ORG -s $SPACE --skip-ssl-validation"
-#echo $target
-eval $target
+cf login -a $API_ENDPOINT -u $USERNAME -p $PASSWORD -o $ORG -s $SPACE --skip-ssl-validation
 
 DEPLOYED_VERSION_CMD=$(CF_COLOR=false cf a | grep $CF_APP_NAME- | cut -d" " -f1| cut -d"-" -f2)
 DEPLOYED_VERSION="$DEPLOYED_VERSION_CMD"
