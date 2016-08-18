@@ -18,11 +18,11 @@ fi
 # push a new version and map the route
 cf cs cleardb spark p-mysql
 cf cs cloudamqp lemur p-rabbitmq
-cf p "$CF_APP_NAME-$CURRENT_VERSION" -p lab-release/contactDataService-*.jar -n "$CF_APP_NAME-$CURRENT_VERSION" -f lab-repo/lab1/ci/tasks/manifest.yml
-cf map-route "$CF_APP_NAME-$CURRENT_VERSION" $CF_APPS_DOMAIN -n $CF_APP_NAME
+cf p "$CF_APP_NAME-$CURRENT_VERSION" -p lab-release/contactDataService-*.jar -f lab-repo/lab1/ci/tasks/manifest.yml
+cf map-route "$CF_APP_NAME-$CURRENT_VERSION" $CF_APPS_DOMAIN -n $CF_ROUTE_NAME
 if [ ! -z "$DEPLOYED_VERSION" ]; then
   # Unmap the route and delete
-  cf unmap-route "$CF_APP_NAME-$DEPLOYED_VERSION" $CF_APPS_DOMAIN -n $CF_APP_NAME
+  cf unmap-route "$CF_APP_NAME-$DEPLOYED_VERSION" $CF_APPS_DOMAIN -n $CF_ROUTE_NAME
   # Scaling down
   cf scale "$CF_APP_NAME-$DEPLOYED_VERSION" -i 1
 fi

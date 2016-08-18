@@ -79,3 +79,4 @@ jobs:
         SPACE: {{cf-dev-space}}
         CF_APPS_DOMAIN: {{cf-dev-domain}}
         CF_APP_NAME: contactDataService
+        CF_ROUTE_NAME: contactDataService-dev
