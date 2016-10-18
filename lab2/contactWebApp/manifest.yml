@@ -8,4 +8,4 @@ applications:
 - name: contactWebApp
   path: target/contactWebApp-0.0.1-SNAPSHOT.jar
   # hosts: [ contactwebapp ]
-  services: [ p-redis,p-rabbitmq, contact-service ]
+  services: [ session-state ,p-rabbitmq, contact-service ]
