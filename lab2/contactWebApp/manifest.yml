@@ -5,7 +5,7 @@ memory: 512M
 env:
     SPRING_PROFILES_ACTIVE: cloud
 applications:
-- name: contactWebApp
+- name: pg-contactWebApp
   path: target/contactWebApp-0.0.1-SNAPSHOT.jar
   # hosts: [ contactwebapp ]
-  services: [ session-state ,p-rabbitmq, contact-service ]
+  services: [ pm-redis, pg-amqp, pg-contact-service ]
