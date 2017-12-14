@@ -4,12 +4,6 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
-  rabbitmq:
-    host: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.host:localhost}
-    port: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.port:5672}
-    username: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.username:guest}
-    password: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.password:guest}
-    virtualHost: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.vhost:/}
 logging:
   level:
     io.pivotal.demo: DEBUG
@@ -23,17 +17,6 @@ info:
     group: ${project.groupId:io.pivotal.demo}
     artifact: ${project.artifactId:contactDataService}
 
-eureka:
-  instance:
-    statusPageUrlPath: /info
-    healthCheckUrlPath: /health
-    homePageUrlPath: /
-    registryFetchIntervalSeconds: 5
-    leaseRenewalIntervalInSeconds: 5
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-
 ---
 spring:
   profiles: local
@@ -44,17 +27,4 @@ spring:
 spring:
   profiles: cloud
   datasource:
-    platform: mysql 
-    cloud:
-  services:
-    registrationMethod: route
-eureka:
-  instance:
-    securePortEnabled: true
-    nonSecurePortEnabled: false
-    secureVirtualHostName: ${spring.application.name}
-    metadataMap:
-      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
-    client:
-    serviceUrl:
-      defaultZone: ${vcap.services.p-service-registry.credentials.uri}/eureka/
+    platform: mysql

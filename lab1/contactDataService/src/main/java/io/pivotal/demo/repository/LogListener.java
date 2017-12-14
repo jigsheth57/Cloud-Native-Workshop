@@ -48,12 +48,6 @@ public class LogListener {
     }
 
     private void postMessage(String message) {
-/*
-    	ConnectionFactory conn = rabbitTemplate.getConnectionFactory();
-		log.debug("RabbitMQ Host:"+conn.getHost());
-		log.debug("RabbitMQ Port:"+conn.getPort());
-		log.debug("RabbitMQ VirtualHost:"+conn.getVirtualHost());
-*/		
     	log.debug(message);
     	rabbitTemplate.convertAndSend(queueName, message);
     }
