@@ -34,11 +34,11 @@ public class ContactDataServiceApplication implements CommandLineRunner {
 	private static final Log log = LogFactory.getLog(ContactDataServiceApplication.class);
 	@Autowired
 	protected ContactRepository contactRepo;
-		
+
 	public static void main(String[] args) {
 		SpringApplication.run(ContactDataServiceApplication.class, args);
 	}
-		
+
 	@Bean
 	public Queue contactChangeEventQueue() {
 		return new Queue(queueName);
@@ -48,12 +48,12 @@ public class ContactDataServiceApplication implements CommandLineRunner {
     public Docket newsApi() {
         return new Docket(DocumentationType.SWAGGER_2)
         		.apiInfo(apiInfo())
-        		.select()                                  
-                .apis(RequestHandlerSelectors.any())              
-                .paths(PathSelectors.any())                          
-                .build();  
+        		.select()
+                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any())
+                .build();
     }
-     
+
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Event-Driven Contact Data Service sample")
@@ -65,7 +65,7 @@ public class ContactDataServiceApplication implements CommandLineRunner {
                 .version("2.0")
                 .build();
     }
-    
+
 	@RequestMapping("/")
 	public String home() {
 		return "redirect:/swagger-ui.html";
@@ -73,16 +73,16 @@ public class ContactDataServiceApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... arg0) throws Exception {
-		long size = contactRepo.count();
-		if(size == 0) {
-			final String title = "Sr. Platform Architect";
-			final String firstName = "Jig";
-			final String lastName = "Sheth";
-			final String email = "jigsheth@pivotal.io";
-			final Phone phone = new Phone(PhoneType.work,"650-846-1600");
-			io.pivotal.demo.domain.Contact newContact = new io.pivotal.demo.domain.Contact(title, firstName, lastName, email, phone);
-			contactRepo.save(newContact);
-		}
+		// long size = contactRepo.count();
+		// if(size == 0) {
+		// 	final String title = "Sr. Platform Architect";
+		// 	final String firstName = "Jig";
+		// 	final String lastName = "Sheth";
+		// 	final String email = "jigsheth@pivotal.io";
+		// 	final Phone phone = new Phone(PhoneType.work,"650-846-1600");
+		// 	io.pivotal.demo.domain.Contact newContact = new io.pivotal.demo.domain.Contact(title, firstName, lastName, email, phone);
+		// 	contactRepo.save(newContact);
+		// }
 		
 	}
 

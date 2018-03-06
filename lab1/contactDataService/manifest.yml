@@ -5,4 +5,4 @@ applications:
 - name: contactDataService
   path: target/contactDataService-0.0.1-SNAPSHOT.jar
   random-route: true
-  services: [ p-mysql, p-rabbitmq]
+  services: [ p-rabbitmq, p-mysql]
