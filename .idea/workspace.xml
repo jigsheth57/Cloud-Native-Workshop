@@ -2,40 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5b10489-a3c9-4d6d-90ae-acc7f47d3292" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/common/ContactBootstrap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/config/ActuatorSecurity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/config/ActuatorSecurity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1/contactDataService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/contactDataService/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/contactDataService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/ContactDataServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/ContactDataServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/controller/ContactController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/domain/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/domain/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/repository/ContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/repository/ContactRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/repository/LogListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/contactDataService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/src/main/resources/application2.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/src/test/java/io/pivotal/demo/repository/integration/ContactRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/contactDataService/src/test/java/io/pivotal/demo/repository/integration/ContactRepositoryTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/target/contactDataService-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/readme.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/readme.adoc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/ContactWebAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/ContactWebAppApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/config/HttpSessionConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/config/WebSocketConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/controller/DataServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/controller/DataServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/service/PublishMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/partials/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/partials/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/src/test/java/io/pivotal/demo/ContactWebAppApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/src/test/java/io/pivotal/demo/web/integration/DataServiceControllerTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/target/contactWebApp-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest-contactDataService.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manifest-contactDataService.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest-contactWebApp.yml" beforeDir="false" afterPath="$PROJECT_DIR$/manifest-contactWebApp.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/lab1/contactDataService/target/" />
     <ignored path="$PROJECT_DIR$/lab2/contactWebApp/target/" />
@@ -56,7 +24,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Dockerfile" value="3" />
+          <entry key="Dockerfile" value="5" />
           <entry key="adoc" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="7" />
@@ -72,7 +40,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="AsciiDoc" value="1" />
-          <entry key="Dockerfile" value="3" />
+          <entry key="Dockerfile" value="5" />
           <entry key="HTML" value="7" />
           <entry key="JAVA" value="38" />
           <entry key="JavaScript" value="3" />
@@ -85,7 +53,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Dockerfile" value="9" />
+          <entry key="Dockerfile" value="38" />
           <entry key="java" value="473" />
           <entry key="xml" value="47" />
           <entry key="yml" value="239" />
@@ -93,7 +61,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dockerfile" value="9" />
+          <entry key="Dockerfile" value="38" />
           <entry key="JAVA" value="473" />
           <entry key="XML" value="47" />
           <entry key="YAML" value="239" />
@@ -103,20 +71,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manifest-contactWebApp.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/manifest-contactDataService.yml">
+        <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="30">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -136,7 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lab1/contactDataService/Dockerfile" />
         <option value="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/config/ActuatorSecurity.java" />
         <option value="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/domain/Contact.java" />
         <option value="$PROJECT_DIR$/lab1/contactDataService/src/main/java/io/pivotal/demo/repository/ContactRepository.java" />
@@ -157,6 +115,8 @@
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/manifest-contactDataService.yml" />
         <option value="$PROJECT_DIR$/manifest-contactWebApp.yml" />
+        <option value="$PROJECT_DIR$/lab1/contactDataService/Dockerfile" />
+        <option value="$PROJECT_DIR$/lab2/contactWebApp/Dockerfile" />
       </list>
     </option>
   </component>
@@ -197,7 +157,20 @@
             <path>
               <item name="contactapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="Spring-PCF-Workshop" type="462c0819:PsiDirectoryNode" />
-              <item name="lab1" type="462c0819:PsiDirectoryNode" />
+              <item name="lab2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="contactapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring-PCF-Workshop" type="462c0819:PsiDirectoryNode" />
+              <item name="lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="contactWebApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="contactapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring-PCF-Workshop" type="462c0819:PsiDirectoryNode" />
+              <item name="lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="contactWebApp" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -208,7 +181,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540074744565" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540075402910" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="spring.boot" />
@@ -265,12 +238,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540063005290</updated>
-      <workItem from="1540063006493" duration="11273000" />
+      <workItem from="1540063006493" duration="11857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11273000" />
+    <option name="totallyTimeSpent" value="11857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -516,22 +489,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab1/contactDataService/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/partials/footer.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -589,6 +552,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/manifest-contactDataService.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/manifest-contactWebApp.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -596,10 +566,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifest-contactDataService.yml">
+    <entry file="file://$PROJECT_DIR$/lab1/contactDataService/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="30">
+          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
         </state>
       </provider>
     </entry>

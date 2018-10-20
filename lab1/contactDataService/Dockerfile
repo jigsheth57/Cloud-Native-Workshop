@@ -1,6 +1,6 @@
 FROM openjdk
 VOLUME /tmp
-ARG JAR_FILE
+ARG JAR_FILE=contactDataService.jar
 ADD target/${JAR_FILE} app.jar
 RUN bash -c 'touch /app.jar'
 EXPOSE 8080
