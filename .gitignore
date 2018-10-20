@@ -1,0 +1,4 @@
+lab1/contactDataService/target/**
+!lab1/contactDataService/target/*.jar
+lab2/contactWebApp/target/**
+!lab2/contactWebApp/target/*.jar

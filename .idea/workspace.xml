@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5b10489-a3c9-4d6d-90ae-acc7f47d3292" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/contactDataService/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/.gitignore" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/lab1/contactDataService/target/" />
     <ignored path="$PROJECT_DIR$/lab2/contactWebApp/target/" />
@@ -26,7 +28,7 @@
         <counts>
           <entry key="Dockerfile" value="5" />
           <entry key="adoc" value="1" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="6" />
           <entry key="html" value="7" />
           <entry key="java" value="38" />
           <entry key="js" value="3" />
@@ -45,7 +47,7 @@
           <entry key="JAVA" value="38" />
           <entry key="JavaScript" value="3" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="7" />
           <entry key="SQL" value="4" />
           <entry key="XML" value="7" />
           <entry key="YAML" value="14" />
@@ -54,6 +56,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="38" />
+          <entry key="gitignore" value="86" />
           <entry key="java" value="473" />
           <entry key="xml" value="47" />
           <entry key="yml" value="239" />
@@ -63,6 +66,7 @@
         <counts>
           <entry key="Dockerfile" value="38" />
           <entry key="JAVA" value="473" />
+          <entry key="PLAIN_TEXT" value="86" />
           <entry key="XML" value="47" />
           <entry key="YAML" value="239" />
         </counts>
@@ -72,10 +76,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/Dockerfile">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state relative-caret-position="45">
+              <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -117,6 +121,9 @@
         <option value="$PROJECT_DIR$/manifest-contactWebApp.yml" />
         <option value="$PROJECT_DIR$/lab1/contactDataService/Dockerfile" />
         <option value="$PROJECT_DIR$/lab2/contactWebApp/Dockerfile" />
+        <option value="$PROJECT_DIR$/lab2/contactWebApp/.gitignore" />
+        <option value="$PROJECT_DIR$/lab1/contactDataService/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -159,19 +166,6 @@
               <item name="Spring-PCF-Workshop" type="462c0819:PsiDirectoryNode" />
               <item name="lab2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="contactapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spring-PCF-Workshop" type="462c0819:PsiDirectoryNode" />
-              <item name="lab2" type="462c0819:PsiDirectoryNode" />
-              <item name="contactWebApp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contactapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spring-PCF-Workshop" type="462c0819:PsiDirectoryNode" />
-              <item name="lab2" type="462c0819:PsiDirectoryNode" />
-              <item name="contactWebApp" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -181,12 +175,15 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540075402910" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540076435357" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="io.pivotal.demo.config" />
     </key>
@@ -238,12 +235,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540063005290</updated>
-      <workItem from="1540063006493" duration="11857000" />
+      <workItem from="1540063006493" duration="12856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11857000" />
+    <option name="totallyTimeSpent" value="12856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -542,9 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab1/contactDataService/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab1/contactDataService/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -575,8 +569,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="105">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
