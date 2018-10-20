@@ -3,19 +3,40 @@ spring:
     active: local
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
 logging:
   level:
-    io.pivotal.demo: DEBUG
-    org.hibernate.SQL: DEBUG
-info:
-  component: Contact Data Service
-  build:
-    name: ${project.name:contactDataService}
-    description: ${project.description:Event-Driven Contact Data Service using Spring JPA, REST, AMQP}
-    version: ${project.version:0.0.1-SNAPSHOT}
-    group: ${project.groupId:io.pivotal.demo}
-    artifact: ${project.artifactId:contactDataService}
+    io.pivotal.demo: INFO
+    org.hibernate.SQL: INFO
+
+server:
+  port: ${PORT:8080}
+
+management:
+  cloudfoundry:
+    skip-ssl-validation: true
+    enabled: true
+  endpoints:
+    web:
+      base-path: /manage
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      roles: USER
+      show-details: always
+    env:
+      keys-to-sanitize:  pwd,uid,password,secret,key,client_id,client_key # suffix or regex
+
+default.contacts:
+  contacts:
+  - title: Advisory Platform Architect
+    firstName: Jignesh
+    lastName: Sheth
+    email: jsheth@pivotal.io
+    phone:
+      type: work
+      value: (415)777-4868
 
 ---
 spring:
@@ -27,4 +48,4 @@ spring:
 spring:
   profiles: cloud
   datasource:
-    platform: mysql
+    platform: h2

@@ -1,10 +1,11 @@
 ---
-timeout: 180
-instances: 1
-env:
-    SPRING_PROFILES_ACTIVE: cloud
 applications:
-- name: contactDataService
-  path: lab1/contactDataService/target/contactDataService-0.0.1-SNAPSHOT.jar
+- name: contactdataservice
+  path: lab1/contactDataService/target/contactDataService.jar
   random-route: true
-  services: [ p-mysql, p-rabbitmq ]
+  timeout: 180
+  instances: 1
+  memory: 1024M
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    SPRING_DATASOURCE_PLATFORM: h2

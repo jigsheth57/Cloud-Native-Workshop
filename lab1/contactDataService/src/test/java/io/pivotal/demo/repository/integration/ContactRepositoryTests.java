@@ -1,6 +1,7 @@
 package io.pivotal.demo.repository.integration;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -89,18 +90,17 @@ public class ContactRepositoryTests {
 		final Phone phone = new Phone(PhoneType.work,"312-555-1212");
 		Contact newContact = new Contact(title, firstName, lastName, email, phone);
 		newContact = contactRepo.save(newContact);
-		Contact savedContact = 
-				contactRepo.findOne(newContact.getId());
+		Optional<Contact> savedContact = contactRepo.findById(newContact.getId());
 		TestCase.assertEquals(
-				title, savedContact.getTitle());
+				title, savedContact.get().getTitle());
 		TestCase.assertEquals(
-				firstName, savedContact.getFirstName());
+				firstName, savedContact.get().getFirstName());
 		TestCase.assertEquals(
-				lastName, savedContact.getLastName());
+				lastName, savedContact.get().getLastName());
 		TestCase.assertEquals(
-				email, savedContact.getEmail());
+				email, savedContact.get().getEmail());
 		TestCase.assertEquals(
-				phone.toString(), savedContact.getPhone().toString());
+				phone.toString(), savedContact.get().getPhone().toString());
 	}
 
 	/**
@@ -125,18 +125,18 @@ public class ContactRepositoryTests {
 		updatedContact.setEmail(email+"_updated");
 		updatedContact.setPhone(updatedPhone);
 		updatedContact = contactRepo.save(updatedContact);
-		Contact savedContact = 
-				contactRepo.findOne(updatedContact.getId());
+		Optional<Contact> savedContact =
+				contactRepo.findById(updatedContact.getId());
 		TestCase.assertEquals(
-				title+"_updated", savedContact.getTitle());
+				title+"_updated", savedContact.get().getTitle());
 		TestCase.assertEquals(
-				firstName+"_updated", savedContact.getFirstName());
+				firstName+"_updated", savedContact.get().getFirstName());
 		TestCase.assertEquals(
-				lastName+"_updated", savedContact.getLastName());
+				lastName+"_updated", savedContact.get().getLastName());
 		TestCase.assertEquals(
-				email+"_updated", savedContact.getEmail());
+				email+"_updated", savedContact.get().getEmail());
 		TestCase.assertEquals(
-				updatedPhone.toString(), savedContact.getPhone().toString());
+				updatedPhone.toString(), savedContact.get().getPhone().toString());
 	}
 
 	/**
@@ -148,10 +148,10 @@ public class ContactRepositoryTests {
 	 */
 	@Test
 	public void testDelete() {
-		
-		contactRepo.delete(contact.getId());
-		Contact savedContact = 
-				contactRepo.findOne(contact.getId());
-		TestCase.assertNull(savedContact);
+		Long id = contact.getId();
+		contactRepo.deleteById(id);
+		Optional<Contact> savedContact =
+				contactRepo.findById(id);
+		TestCase.assertEquals(false,savedContact.isPresent());
 	}
 }

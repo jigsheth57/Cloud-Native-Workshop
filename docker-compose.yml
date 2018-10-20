@@ -1,39 +1,22 @@
-contactDataService:
-  image: jigsheth57/contactdataservice:latest
-  environment:
+version: '2.4'
+
+services:
+  contactdataservice:
+    image: jigsheth57/contactdataservice:latest
+    container_name: contactdataservice
+    environment:
+    - PORT=8080
     - SPRING_PROFILES_ACTIVE=local
-    - SPRING_RABBITMQ_HOST=rabbitmq
-  ports:
-   - "8080:8080"
-  links:
-   - rabbitmq
-contactWebApp:
-  image: jigsheth57/contactwebapp:latest
-  environment:
+    ports:
+    - "8080:8080"
+  contactwebapp:
+    image: jigsheth57/contactwebapp:latest
+    container_name: contactwebapp
+    environment:
+    - PORT=8090
     - SPRING_PROFILES_ACTIVE=local
-    - SPRING_REDIS_HOST=redis
-    - CF_INSTANCE_INDEX=0
-    - SPRING_RABBITMQ_HOST=rabbitmq
-    - SPRING_RABBITMQ_PORT=5672
-    - SPRING_RABBITMQ_USERNAME=guest
-    - SPRING_RABBITMQ_PASSWORD=guest
-    - VCAP_SERVICES_CONTACT-SERVICE_CREDENTIALS_URI=contactDataService:8080
-  ports:
-   - "8090:8090"
-  links:
-   - rabbitmq
-   - redis
-   - contactDataService
-rabbitmq:
-  image: rabbitmq:3-management
-  ports:
-  - "15671:15671"
-  - "15672:15672"
-  - "5672:5672"
-  - "4369:4369"
-  - "5671:5671"
-  - "25672:25672"
-redis:
-  image: redis:latest
-  ports:
-    - "6379:6379"
+    ports:
+    - "8090:8090"
+    depends_on:
+      contactdataservice:
+        condition: service_healthy

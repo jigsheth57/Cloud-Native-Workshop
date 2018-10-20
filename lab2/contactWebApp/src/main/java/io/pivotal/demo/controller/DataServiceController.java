@@ -26,7 +26,7 @@ public class DataServiceController {
 
 	private RestTemplate restTemplate = new RestTemplate();
 
-	@Value("${contact.dataservice.endpoint}")
+	@Value("${contact.dataservice.endpoint:localhost:8080}")
 	private String contactDataserviceEP;
 
 	@Value("${contact.dataservice.unavailable}")

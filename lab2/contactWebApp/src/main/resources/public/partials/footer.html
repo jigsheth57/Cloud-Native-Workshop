@@ -3,7 +3,7 @@
 	<div class="col-md-10">
 		<div class="well">
 			<a href="#/contacts" class="btn btn-info btn-sm">List Contacts</a>&nbsp;&nbsp;&nbsp;
-			<a href="#/contacts" class="btn btn-info btn-sm" onClick="window.open('/push_message.html', '_blank')">Event Notification</a>&nbsp;&nbsp;&nbsp;
+			<!--<a href="#/contacts" class="btn btn-info btn-sm" onClick="window.open('/push_message.html', '_blank')">Event Notification</a>&nbsp;&nbsp;&nbsp;-->
 			<span ng-show="contacts" class="ng-hide"><a href="#/contacts/e/new" class="btn btn-success btn-sm">Create New Contact</a></span>&nbsp;&nbsp;&nbsp;
 			<span ng-show="contact" class="ng-hide"><a href="#/contacts/e/{{contact.id}}" class="btn btn-success btn-sm">Update Contact</a></span>&nbsp;&nbsp;&nbsp;
 			<span ng-show="contact" class="ng-hide"><a ng-click="delete(contact.id)" class="btn btn-danger btn-sm">Delete Contact</a></span>&nbsp;&nbsp;&nbsp;

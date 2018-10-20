@@ -8,10 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import io.pivotal.demo.repository.LogListener;
-
 @Entity
-@EntityListeners(LogListener.class)
 public class Contact {
 
 	@Id
@@ -96,7 +93,4 @@ public class Contact {
 				email,
 				phone);
 	}
-	
-	
-
 }

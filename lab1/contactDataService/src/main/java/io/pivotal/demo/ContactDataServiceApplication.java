@@ -1,20 +1,19 @@
 package io.pivotal.demo;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.springframework.amqp.core.Queue;
+import io.pivotal.demo.common.ContactBootstrap;
+import io.pivotal.demo.repository.ContactRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import io.pivotal.demo.domain.Phone;
-import io.pivotal.demo.domain.PhoneType;
-import io.pivotal.demo.repository.ContactRepository;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -24,66 +23,67 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import javax.annotation.PostConstruct;
+
 @SpringBootApplication
 @EnableSwagger2
-@ComponentScan("io.pivotal.demo")
 @Controller
-public class ContactDataServiceApplication implements CommandLineRunner {
+@EnableConfigurationProperties
+public class ContactDataServiceApplication {
 
-	final static String queueName = "contact-change-event";
-	private static final Log log = LogFactory.getLog(ContactDataServiceApplication.class);
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
-	protected ContactRepository contactRepo;
+	private ContactRepository contactRepo;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ContactDataServiceApplication.class, args);
 	}
 
-	@Bean
-	public Queue contactChangeEventQueue() {
-		return new Queue(queueName);
+	@Configuration
+	public static class RepositoryConfig extends RepositoryRestConfigurerAdapter {
+		@Override
+		public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
+			config.exposeIdsFor(io.pivotal.demo.domain.Contact.class);
+		}
 	}
 
-    @Bean
-    public Docket newsApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-        		.apiInfo(apiInfo())
-        		.select()
-                .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
-                .build();
-    }
+	@Bean
+	public ContactBootstrap contactBootstrap() { return new ContactBootstrap();}
 
-    private ApiInfo apiInfo() {
-        return new ApiInfoBuilder()
-                .title("Event-Driven Contact Data Service sample")
-                .description("Event-Driven Contact Data Service demo using Spring JPA, REST, AMQP with Swagger")
-                .termsOfServiceUrl("http://pivotal.io/")
-                .contact(new Contact("Jignesh Sheth",null,null))
-                .license("Apache License Version 2.0")
-                .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0")
-                .version("2.0")
-                .build();
-    }
+	@PostConstruct
+	public void bootstrap() {
+		if (contactRepo.count() == 0) {
+			contactRepo.save(contactBootstrap().getContacts().get(0));
+		}
+	}
+
+
+	@Bean
+	public Docket newsApi() {
+		return new Docket(DocumentationType.SWAGGER_2)
+				.apiInfo(apiInfo())
+				.select()
+				.apis(RequestHandlerSelectors.basePackage("io.pivotal.demo.controller"))
+//				.paths(PathSelectors.regex("^/(contacts|contact|manage).*$"))
+				.paths(PathSelectors.any())
+				.build();
+	}
+
+	private ApiInfo apiInfo() {
+		return new ApiInfoBuilder()
+				.title("SFDC Auth Service API sample")
+				.description("SFDC Auth Service API demo using Spring Cloud Services and SFDC Api")
+				.termsOfServiceUrl("http://pivotal.io/")
+				.contact(new Contact("Jignesh Sheth",null,null))
+				.license("Apache License Version 2.0")
+				.licenseUrl("http://www.apache.org/licenses/LICENSE-2.0")
+				.version("2.0")
+				.build();
+	}
 
 	@RequestMapping("/")
 	public String home() {
 		return "redirect:/swagger-ui.html";
 	}
-
-	@Override
-	public void run(String... arg0) throws Exception {
-		// long size = contactRepo.count();
-		// if(size == 0) {
-		// 	final String title = "Sr. Platform Architect";
-		// 	final String firstName = "Jig";
-		// 	final String lastName = "Sheth";
-		// 	final String email = "jigsheth@pivotal.io";
-		// 	final Phone phone = new Phone(PhoneType.work,"650-846-1600");
-		// 	io.pivotal.demo.domain.Contact newContact = new io.pivotal.demo.domain.Contact(title, firstName, lastName, email, phone);
-		// 	contactRepo.save(newContact);
-		// }
-		
-	}
-
 }

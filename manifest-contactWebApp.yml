@@ -1,12 +1,10 @@
 ---
-timeout: 180
-instances: 1
-memory: 512M
-env:
-    SPRING_PROFILES_ACTIVE: cloud
 applications:
-- name: contactWebApp
-  path: lab2/contactWebApp/target/contactWebApp-0.0.1-SNAPSHOT.jar
+- name: contactwebapp
+  path: lab2/contactWebApp/target/contactWebApp.jar
   random-route: true
-  # hosts: [ contactwebapp ]
-  services: [ p-rabbitmq, contact-service ]
+  timeout: 180
+  instances: 1
+  memory: 1024M
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
