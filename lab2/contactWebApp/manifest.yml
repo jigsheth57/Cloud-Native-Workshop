@@ -6,7 +6,6 @@ env:
     SPRING_PROFILES_ACTIVE: cloud
 applications:
 - name: contactWebApp
-  path: target/contactWebApp-0.0.1-SNAPSHOT.jar
+  path: target/contactWebApp.jar
   random-route: true
   # hosts: [ contactwebapp ]
-  services: [ p-redis, p-rabbitmq, contact-service ]

@@ -9,13 +9,13 @@
 var contactControllers = angular.module('contactControllers', []);
 
 contactApp.controller('ContactListController', function($scope, $http) {
-	
+
 	$scope.getContacts = function() {
 		// when landing on the page, get all contacts and show them
 		$http.get('/contacts').success(function(data) {
 			console.log("response data: " + JSON.stringify(data));
 			$scope.contacts = data;
-			$http.get('/env/CF_INSTANCE_INDEX').success(function(data) {
+			$http.get('/manage/env/CF_INSTANCE_INDEX').success(function(data) {
 				$scope.systemenv = data;
 				console.log('System Env CF_INSTANCE_INDEX: '+data);
 			}).error(function(data) {
@@ -38,7 +38,7 @@ contactApp.controller('ContactListController', function($scope, $http) {
 			$scope.error = data.code;
 		});
 	};
-	
+
 	//Handles the delete request function
 	$scope.delete = function(contactId) {
 		console.log("deleting id " + contactId);
@@ -59,7 +59,7 @@ contactApp.controller('ContactInfoController', function($scope, $http, $routePar
 	$scope.getContact = function() {
 		$http.get("/contacts/" + $routeParams.id).success(function(data) {
 			$scope.contact = data;
-		});				
+		});
 	};
 
 	//Handles the delete request function of the account
@@ -73,7 +73,7 @@ contactApp.controller('ContactInfoController', function($scope, $http, $routePar
 		}
 	}
 
-	
+
 	// Initial page load
 	$scope.getContact();
 });
@@ -104,10 +104,10 @@ contactApp.controller('EditContactInfoController', function($scope, $http, $rout
 			}).error(function(data, status, headers, config) {
 				$scope.message = "Successfully saved the contact.";
 				$scope.error = "";
-			});			
+			});
 		}
 	};
-	
+
 	//Handles the delete request function of the account
 	$scope.delete = function(id) {
 		if($routeParams.id != "new") {
@@ -127,8 +127,7 @@ contactApp.controller('EditContactInfoController', function($scope, $http, $rout
 			});
 		}
 	}
-	
+
 	//Initial load
 	$scope.reset();
 });
-

@@ -3,6 +3,5 @@ timeout: 180
 instances: 1
 applications:
 - name: contactDataService
-  path: target/contactDataService-0.0.1-SNAPSHOT.jar
+  path: target/contactDataService.jar
   random-route: true
-  services: [ p-rabbitmq, p-mysql]
