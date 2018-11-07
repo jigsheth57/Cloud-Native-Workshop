@@ -15,23 +15,22 @@ contactApp.controller('ContactListController', function($scope, $http) {
 		$http.get('/contacts').success(function(data) {
 			console.log("response data: " + JSON.stringify(data));
 			$scope.contacts = data;
-			$http.get('/manage/env/CF_INSTANCE_INDEX').success(function(data) {
-				$scope.systemenv = data;
-				console.log('System Env CF_INSTANCE_INDEX: '+data);
-			}).error(function(data) {
-				console.log('Error: ' + data);
-				$scope.message = "";
-				$scope.error = "";
-				var envdata = {"CF_INSTANCE_INDEX":0};
-				$scope.systemenv = envdata;
-			});
-			$http.get('/sessionid').success(function(data) {
-				$scope.sessionid = data.sessionid;
-			}).error(function(data) {
-				console.log('Error: ' + data);
-				$scope.message = "";
-				$scope.error = "";
-			});
+			// $http.get('/manage/env/CF_INSTANCE_INDEX').success(function(data) {
+			// 	$scope.instance_index = data.property.value;
+			// 	console.log('System Env CF_INSTANCE_INDEX: '+data.property.value);
+			// }).error(function(data) {
+			// 	console.log('Error: ' + data);
+			// 	$scope.message = "";
+			// 	$scope.error = "";
+			// 	$scope.instance_index = 0;
+			// });
+			// $http.get('/sessionid').success(function(data) {
+			// 	$scope.sessionid = data.sessionid;
+			// }).error(function(data) {
+			// 	console.log('Error: ' + data);
+			// 	$scope.message = "";
+			// 	$scope.error = "";
+			// });
 		}).error(function(data) {
 			console.log('Error: ' + data);
 			$scope.message = data.message;

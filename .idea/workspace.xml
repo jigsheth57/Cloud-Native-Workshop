@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d5b10489-a3c9-4d6d-90ae-acc7f47d3292" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/contactDataService/manifest.yml" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/contactDataService/manifest.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/manifest.yml" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/manifest.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/js/controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/js/controllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/target/contactWebApp-docker-info.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/target/contactWebApp-docker-info.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/partials/contactList.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/partials/contactList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/target/contactWebApp-docker-info.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lab2/contactWebApp/target/contactWebApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/contactWebApp/target/contactWebApp.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/lab1/contactDataService/target/" />
@@ -25,8 +24,8 @@
         <counts>
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -34,13 +33,13 @@
           <entry key="Dockerfile" value="5" />
           <entry key="adoc" value="1" />
           <entry key="gitignore" value="6" />
-          <entry key="html" value="7" />
+          <entry key="html" value="10" />
           <entry key="java" value="39" />
-          <entry key="js" value="3" />
+          <entry key="js" value="6" />
           <entry key="md" value="1" />
           <entry key="sql" value="4" />
           <entry key="versionsBackup" value="1" />
-          <entry key="xml" value="7" />
+          <entry key="xml" value="8" />
           <entry key="yml" value="15" />
         </counts>
       </usages-collector>
@@ -48,13 +47,13 @@
         <counts>
           <entry key="AsciiDoc" value="1" />
           <entry key="Dockerfile" value="5" />
-          <entry key="HTML" value="7" />
+          <entry key="HTML" value="10" />
           <entry key="JAVA" value="39" />
-          <entry key="JavaScript" value="3" />
+          <entry key="JavaScript" value="6" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="SQL" value="4" />
-          <entry key="XML" value="7" />
+          <entry key="XML" value="8" />
           <entry key="YAML" value="15" />
         </counts>
       </usages-collector>
@@ -62,7 +61,9 @@
         <counts>
           <entry key="Dockerfile" value="38" />
           <entry key="gitignore" value="86" />
+          <entry key="html" value="15" />
           <entry key="java" value="473" />
+          <entry key="js" value="31" />
           <entry key="xml" value="47" />
           <entry key="yml" value="248" />
         </counts>
@@ -70,7 +71,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="38" />
+          <entry key="HTML" value="15" />
           <entry key="JAVA" value="473" />
+          <entry key="JavaScript" value="31" />
           <entry key="PLAIN_TEXT" value="86" />
           <entry key="XML" value="47" />
           <entry key="YAML" value="248" />
@@ -79,21 +82,33 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/controller/DataServiceController.java">
+        <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            <state relative-caret-position="354">
+              <caret line="120" selection-start-line="113" selection-end-line="120" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/js/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="33" selection-start-line="17" selection-end-line="33" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/partials/contactList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="3" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -124,7 +139,6 @@
         <option value="$PROJECT_DIR$/lab1/contactDataService/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/ContactWebAppApplication.java" />
         <option value="$PROJECT_DIR$/lab2/contactWebApp/src/test/java/io/pivotal/demo/web/integration/DataServiceControllerTests.java" />
-        <option value="$PROJECT_DIR$/lab2/contactWebApp/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/partials/footer.html" />
         <option value="$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/controller/DataServiceController.java" />
@@ -138,6 +152,9 @@
         <option value="$PROJECT_DIR$/lab1/contactDataService/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/lab2/contactWebApp/pom.xml" />
+        <option value="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/js/controllers.js" />
+        <option value="$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/partials/contactList.html" />
       </list>
     </option>
   </component>
@@ -165,6 +182,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,39 +224,7 @@
               <item name="contactWebApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contactapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spring-PCF-Workshop" type="462c0819:PsiDirectoryNode" />
-              <item name="lab2" type="462c0819:PsiDirectoryNode" />
-              <item name="contactWebApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contactapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spring-PCF-Workshop" type="462c0819:PsiDirectoryNode" />
-              <item name="lab2" type="462c0819:PsiDirectoryNode" />
-              <item name="contactWebApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contactapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spring-PCF-Workshop" type="462c0819:PsiDirectoryNode" />
-              <item name="lab2" type="462c0819:PsiDirectoryNode" />
-              <item name="contactWebApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contactapp" type="b2602c69:ProjectViewProjectNode" />
@@ -247,13 +234,34 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="contactapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring-PCF-Workshop" type="462c0819:PsiDirectoryNode" />
+              <item name="lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="contactWebApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="contactapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring-PCF-Workshop" type="462c0819:PsiDirectoryNode" />
+              <item name="lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="contactWebApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,16 +329,18 @@
       <updated>1540063005290</updated>
       <workItem from="1540063006493" duration="13058000" />
       <workItem from="1540306757450" duration="1478000" />
+      <workItem from="1541553174367" duration="889000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14536000" />
+    <option name="totallyTimeSpent" value="15425000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2918455" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29613733" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -492,11 +502,6 @@
         <state relative-caret-position="-260" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/partials/contactList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-185" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/partials/contactInfo.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -508,23 +513,10 @@
     <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/push_message.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="108" selection-start-line="94" selection-end-line="108" />
         </state>
       </provider>
     </entry>
@@ -604,17 +596,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/controller/DataServiceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/java/io/pivotal/demo/controller/DataServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="120" selection-start-line="113" selection-end-line="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="33" selection-start-line="17" selection-end-line="33" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab2/contactWebApp/src/main/resources/public/partials/contactList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="3" selection-end-line="8" />
         </state>
       </provider>
     </entry>

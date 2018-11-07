@@ -111,13 +111,13 @@
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>1.4.3</version>
 				<executions>
-					<execution>
-						<id>package</id>
-						<phase>package</phase>
-						<goals>
-							<goal>build</goal>
-						</goals>
-					</execution>
+					<!--<execution>-->
+						<!--<id>package</id>-->
+						<!--<phase>package</phase>-->
+						<!--<goals>-->
+							<!--<goal>build</goal>-->
+						<!--</goals>-->
+					<!--</execution>-->
 					<execution>
 						<id>install</id>
 						<phase>install</phase>
